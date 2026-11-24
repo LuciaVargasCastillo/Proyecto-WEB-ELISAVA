@@ -83,6 +83,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** Reduje la altura del jardín del 76 % al 69 % de la altura visible para dejar más espacio debajo del primer scroll.
 - **Decisión.** La flor verde y la rosa se suman a las que están abiertas al cargar y a las que permanecen abiertas al volver al reposo tras retirar el cursor.
 
+### Tipografía y guía de la portada
+
+- **Trabajo.** Ajusté «Una Flor de Regalo» a 36 px y elegí Instrument Serif para acercar el contraste de los trazos a la captura.
+- **Decisión.** Coloqué «Clica en las flores de colores» junto al título para indicar cómo explorar el jardín. En pantallas estrechas, la guía se coloca debajo.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
