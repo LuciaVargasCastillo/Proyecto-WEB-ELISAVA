@@ -27,25 +27,25 @@ function randomField(seed) {
   };
 }
 
-function wildflowers(count, seed, depth) {
+function wildflowers(count, seed, depth, openEvery) {
   const random = randomField(seed);
   return Array.from({ length: count }, (_, index) => ({
-    x: random() * 1.35 - .17,
-    height: (.09 + random() ** 1.25 * .77) * depth,
-    lean: (random() - .5) * .34,
-    size: (.014 + random() ** 2 * .047) * depth,
+    x: (index + random()) / count * 1.12 - .06,
+    height: (.13 + random() ** 1.1 * .74) * depth,
+    lean: (random() - .5) * .27,
+    size: (.024 + random() ** 1.45 * .059) * depth,
     petals: 4 + Math.floor(random() * 6),
     color: backgroundColor,
-    startsOpen: (index + seed) % 4 === 0,
+    startsOpen: (index + seed) % openEvery === 0,
   }));
 }
 
 const layers = [
-  { plants: wildflowers(72, 203, .91), alpha: .27, travel: 8 },
-  { plants: wildflowers(54, 425, 1), alpha: .43, travel: 20 },
+  { plants: wildflowers(108, 203, .94, 3), alpha: .31, travel: 8 },
+  { plants: wildflowers(86, 425, 1, 2), alpha: .48, travel: 20 },
   {
     plants: [
-      ...wildflowers(26, 562, .73),
+      ...wildflowers(62, 562, .73, 2),
       { x: .41, height: .38, lean: -.055, size: .071, color: backgroundColor, petals: 8 },
       ...accents,
     ],
