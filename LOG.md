@@ -168,6 +168,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Tipografía y encuadre.** Apliqué Instrument Serif a Historias, limité los nombres al alto o ancho de su retrato y preparé un punto de encuadre individual para cada foto. Las ocho fotos son visibles en el chat y su incorporación a la web queda pendiente de disponer de los archivos.
 
+- **Revisión.** Recuperé la composición original de Historias a petición de la autora, con la tipografía y los encuadres de la primera propuesta.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
