@@ -170,6 +170,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Revisión.** Recuperé la composición original de Historias a petición de la autora, con la tipografía y los encuadres de la primera propuesta.
 
+- **Pies de foto.** Apliqué Instrument Serif, la tipografía del primer scroll, y ajusté los nombres al alto o ancho de su imagen. La composición de las ocho fotos se conserva. La subida de los archivos de imagen queda pendiente.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
