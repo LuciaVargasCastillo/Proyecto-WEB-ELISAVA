@@ -181,6 +181,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Revisión.** Integré Kleine-Levin como un scroll debajo de la portada, con navegación interna de ida y vuelta. Usé la foto del prado que entregó la autora para todo el fondo derecho. La ventana en arco deja ver el mismo fondo por el hueco.
 
+- **Estado de las postales.** Añadí un aviso visible en las cuatro secciones para indicar que el diseño está por determinar y que las postales siguen en desarrollo.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
