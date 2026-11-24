@@ -16,7 +16,7 @@ const accents = [
   { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
   { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
   { x: .84, height: .76, lean: -.105, size: .061, color: '#487a68', petals: 7 },
-  { x: .57, height: .79, lean: .027, size: .103, color: '#2448b6', petals: 7, startsOpen: true },
+  { x: .82, height: .83, lean: .036, size: .096, color: '#2448b6', petals: 7, startsOpen: true },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
 
@@ -234,6 +234,8 @@ let restoreAt;
 let frame;
 let previousTime;
 let pointer;
+let pointerMoved = false;
+let lastPointerMove;
 let active;
 
 function bloomPosition(plant, width, height) {
@@ -303,13 +305,13 @@ function paintBloom(bloom, width, height) {
   stipple(ink, size, size);
 }
 
-function drawBloomImage(bloom, time) {
-  const moving = !reducedMotion.matches && bloom.openness === 1;
+function drawBloomImage(bloom, time, motion) {
+  const moving = motion > 0 && bloom.openness === 1;
   if (moving) {
     const phase = bloom.plant.x * 18 + bloom.plant.height * 9;
     paint.save();
     paint.translate(bloom.x, bloom.y);
-    paint.rotate(Math.sin(time / 980 + phase) * .045 + Math.sin(time / 630 + phase) * .012);
+    paint.rotate(motion * (Math.sin(time / 980 + phase) * .045 + Math.sin(time / 630 + phase) * .012));
     paint.drawImage(bloom.image, bloom.left - bloom.x, bloom.top - bloom.y);
     paint.restore();
   } else {
@@ -333,7 +335,7 @@ function renderGarden(time) {
     blooms.forEach(bloom => paintBloom(bloom, width, height));
   }
 
-  const travel = Math.max(1, garden.offsetHeight - height);
+  const travel = Math.max(1, height * .6);
   const progress = reducedMotion.matches
     ? 0
     : Math.max(0, Math.min(1, -garden.getBoundingClientRect().top / travel));
@@ -393,6 +395,13 @@ function renderGarden(time) {
   }
 
 
+  if (pointerMoved) {
+    lastPointerMove = time;
+    pointerMoved = false;
+  }
+  const motion = pointer && lastPointerMove !== undefined && !reducedMotion.matches
+    ? Math.max(0, 1 - (time - lastPointerMove) / 420)
+    : 0;
   let swaying = false;
   paint.clearRect(0, 0, width, height);
   for (const layer of layers) {
@@ -402,9 +411,9 @@ function renderGarden(time) {
     paint.scale((width + offset * 2) / width, (height + offset) / height);
     paint.drawImage(layer.image, 0, 0);
     for (const bloom of blooms) {
-      if (bloom.layer === layer && bloom !== active) swaying = drawBloomImage(bloom, time) || swaying;
+      if (bloom.layer === layer && bloom !== active) swaying = drawBloomImage(bloom, time, motion) || swaying;
     }
-    if (active?.layer === layer) swaying = drawBloomImage(active, time) || swaying;
+    if (active?.layer === layer) swaying = drawBloomImage(active, time, motion) || swaying;
     paint.restore();
   }
 
@@ -417,6 +426,7 @@ function scheduleGarden() {
 }
 
 function locatePointer(event) {
+  pointerMoved = event.pointerType !== 'touch';
   restoreAt = undefined;
   if (coverActive) {
     coverActive = false;
@@ -429,6 +439,8 @@ function locatePointer(event) {
 }
 
 function clearPointer() {
+  pointerMoved = false;
+  lastPointerMove = undefined;
   if (!coverActive) restoreAt = 0;
   pointer = undefined;
   scheduleGarden();

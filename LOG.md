@@ -70,6 +70,12 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** Alargué la apertura escalonada de 0,64 a 1,35 segundos. Añadí más flores azules de fondo y una flor principal en azul intenso.
 - **Decisión.** Al salir del jardín, la composición recupera gradualmente las flores abiertas de portada. Las que se activan al recorrer el jardín conservan su pausa y su cierre lento.
 
+### Título y posición de las flores en portada
+
+- **Trabajo.** Añadí «Una Flor de Regalo» en Bodoni Moda debajo del jardín, dentro de la primera vista de la página.
+- **Observación y ajuste.** La flor azul intensa se veía encima de la naranja. Moví la azul hacia la derecha y dejé espacio entre las dos corolas.
+- **Decisión.** La portada y la composición que reaparece al salir del jardín quedan quietas. Las flores que están abiertas solo se balancean mientras se recorre el jardín con el cursor.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
