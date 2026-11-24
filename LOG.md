@@ -208,6 +208,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Orden final de la V1.** Moví Kleine-Levin justo después de Historias y antes de las cuatro postales. El botón de la portada y el enlace de regreso conservan sus destinos.
 
+- **Acabado de entrega.** Dejé en blanco el fondo de las cuatro secciones de postal mientras su diseño sigue en desarrollo.
+
 ## Siguientes pasos
 
 - Escribir los textos personales de Historias y las dedicatorias.

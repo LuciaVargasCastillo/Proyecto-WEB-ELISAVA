@@ -164,7 +164,7 @@ body {
   box-sizing: border-box;
   min-height: calc(var(--alto-marco) * .90);
   padding: 40px 20px;
-  background: #e1e5cd;
+  background: #fff;
   border-top: 1px solid #d1d5b9;
 }
 
