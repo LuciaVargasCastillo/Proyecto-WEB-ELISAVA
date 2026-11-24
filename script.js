@@ -27,25 +27,25 @@ function randomField(seed) {
   };
 }
 
-function wildflowers(count, seed, depth, openEvery) {
+function wildflowers(count, seed, depth) {
   const random = randomField(seed);
   return Array.from({ length: count }, (_, index) => ({
-    x: (index + random()) / count * 1.12 - .06,
-    height: (.13 + random() ** 1.1 * .74) * depth,
-    lean: (random() - .5) * .27,
-    size: (.024 + random() ** 1.45 * .059) * depth,
+    x: random() * 1.35 - .17,
+    height: (.09 + random() ** 1.25 * .77) * depth,
+    lean: (random() - .5) * .34,
+    size: (.014 + random() ** 2 * .047) * depth,
     petals: 4 + Math.floor(random() * 6),
     color: backgroundColor,
-    startsOpen: (index + seed) % openEvery === 0,
+    startsOpen: (index + seed) % 4 === 0,
   }));
 }
 
 const layers = [
-  { plants: wildflowers(108, 203, .94, 3), alpha: .31, travel: 8 },
-  { plants: wildflowers(86, 425, 1, 2), alpha: .48, travel: 20 },
+  { plants: wildflowers(72, 203, .91), alpha: .27, travel: 8 },
+  { plants: wildflowers(54, 425, 1), alpha: .43, travel: 20 },
   {
     plants: [
-      ...wildflowers(62, 562, .73, 2),
+      ...wildflowers(26, 562, .73),
       { x: .41, height: .38, lean: -.055, size: .071, color: backgroundColor, petals: 8 },
       ...accents,
     ],
@@ -54,7 +54,7 @@ const layers = [
   },
 ].map(layer => ({ ...layer, image: document.createElement('canvas') }));
 
-function drawStem(ctx, plant, width, height, opacity) {
+function drawStem(ctx, plant, width, height, opacity, sparse = false) {
   const { x, height: reach, lean, size, color, petals } = plant;
   const unit = Math.min(width, height * 1.7);
   const stem = height * reach;
@@ -73,7 +73,7 @@ function drawStem(ctx, plant, width, height, opacity) {
   ctx.stroke();
 
   const leafCount = Math.max(2, Math.round(reach * 6));
-  for (let leaf = 0; leaf < leafCount; leaf++) {
+  for (let leaf = 0; leaf < (sparse ? 1 : leafCount); leaf++) {
     const t = .16 + leaf / leafCount * .67;
     const direction = leaf % 2 === 0 ? 1 : -1;
     const length = (1.5 + Math.sin(leaf * 2 + x * 10) * .45) * radius * (1 - t * .6);
@@ -220,7 +220,7 @@ function makePrint(layer, width, height) {
   image.height = height;
   const ctx = image.getContext('2d');
   for (const plant of layer.plants) {
-    drawStem(ctx, plant, width, height, layer.alpha);
+    drawStem(ctx, plant, width, height, layer.alpha, true);
   }
 
   stipple(ctx, width, height);
@@ -234,6 +234,7 @@ const blooms = layers.flatMap(layer =>
     opening: false,
     holdUntil: 0,
     image: document.createElement('canvas'),
+    branches: document.createElement('canvas'),
   })));
 const changing = new Set();
 let coverActive = true;
@@ -289,7 +290,82 @@ function findBloom(width, height, offsets, nearby) {
   return nearest;
 }
 
+function paintBranches(bloom, width, height) {
+  const growth = Math.round(bloom.openness * 20) / 20;
+  if (growth === 0) {
+    bloom.branchGrowth = 0;
+    return;
+  }
+  if (growth === bloom.branchGrowth && width === bloom.branchWidth && height === bloom.branchHeight) return;
+  bloom.branchGrowth = growth;
+  bloom.branchWidth = width;
+  bloom.branchHeight = height;
+
+  const { plant, branches, layer } = bloom;
+  const { x, y, radius } = bloomPosition(plant, width, height);
+  const base = plant.x * width;
+  const bottom = height * 1.03;
+  const stem = bottom - y;
+  const bend = x - base;
+  const pad = Math.ceil(radius * 2);
+  const left = Math.floor((Math.min(base, x) - pad) / 4) * 4;
+  const top = Math.floor((y - pad) / 4) * 4;
+  const w = Math.ceil(Math.max(base, x) + pad - left);
+  const h = Math.ceil(bottom - top);
+  bloom.branchLeft = left;
+  bloom.branchTop = top;
+  if (branches.width !== w || branches.height !== h) {
+    branches.width = w;
+    branches.height = h;
+  }
+
+  const ctx = branches.getContext('2d', { willReadFrequently: true });
+  ctx.clearRect(0, 0, w, h);
+  ctx.save();
+  ctx.translate(base - left, bottom - top);
+  ctx.fillStyle = plant.color;
+  ctx.strokeStyle = plant.color;
+  ctx.lineWidth = Math.max(.75, radius * .028);
+
+  const count = plant.height > .42 ? 4 : 3;
+  for (let i = 0; i < count; i++) {
+    const delay = i * .14;
+    const amount = Math.max(0, Math.min(1, (growth - delay) / (1 - delay)));
+    if (amount === 0) continue;
+
+    const t = .21 + i * .16;
+    const side = (i + Math.floor(plant.x * 19)) % 2 === 0 ? 1 : -1;
+    const startX = bend * (.2 * t + .8 * t * t);
+    const startY = -stem * (1.24 * t - .24 * t * t);
+    const reach = radius * (1.45 - i * .13) * amount;
+    ctx.globalAlpha = Math.min(.85, layer.alpha + .12) * amount;
+    ctx.beginPath();
+    ctx.moveTo(startX, startY);
+    ctx.quadraticCurveTo(startX + side * reach * .46, startY - reach * .12, startX + side * reach * .84, startY - reach * .67);
+    ctx.stroke();
+
+    for (let leaf = 0; leaf < 2; leaf++) {
+      const leafGrowth = Math.max(0, (amount - .2 - leaf * .24) / (.8 - leaf * .24));
+      if (leafGrowth === 0) continue;
+      const along = .45 + leaf * .55;
+      const length = radius * (.41 - leaf * .07) * leafGrowth;
+      ctx.save();
+      ctx.translate(startX + side * reach * .84 * along, startY - reach * .67 * along ** 2);
+      ctx.rotate(side * (leaf ? .82 : -.6));
+      ctx.beginPath();
+      ctx.moveTo(0, 0);
+      ctx.quadraticCurveTo(-length * .35, -length * .42, 0, -length);
+      ctx.quadraticCurveTo(length * .28, -length * .47, 0, 0);
+      ctx.fill();
+      ctx.restore();
+    }
+  }
+  ctx.restore();
+  stipple(ctx, w, h);
+}
+
 function paintBloom(bloom, width, height) {
+  paintBranches(bloom, width, height);
   const { x, y, radius } = bloomPosition(bloom.plant, width, height);
   const padding = Math.ceil(radius * 1.4) + 2;
   bloom.x = x;
@@ -417,6 +493,11 @@ function renderGarden(time) {
     paint.translate(-offset, -offset);
     paint.scale((width + offset * 2) / width, (height + offset) / height);
     paint.drawImage(layer.image, 0, 0);
+    for (const bloom of blooms) {
+      if (bloom.layer === layer && bloom.branchGrowth > 0) {
+        paint.drawImage(bloom.branches, bloom.branchLeft, bloom.branchTop);
+      }
+    }
     for (const bloom of blooms) {
       if (bloom.layer === layer && bloom !== active) swaying = drawBloomImage(bloom, time, motion) || swaying;
     }
