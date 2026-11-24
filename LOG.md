@@ -107,6 +107,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Decisión.** La flor azul oscura pasó al conjunto verde oliva del fondo y queda cerrada en reposo. Las cuatro protagonistas de la portada y las postales son la rosa, la naranja, la verde y la azul clara.
 
+### Tamaño de la cita y densidad del fondo
+
+- **Observación.** La cita ocupaba demasiado espacio y su fondo tapaba parte de la flor verde. Además, había pocas flores oliva visibles en el jardín.
+- **Ajuste.** Reduje el tamaño de la cita y la coloqué en una franja propia encima del dibujo. Aumenté la cantidad de flores oliva en las tres capas y dejé una proporción mayor abiertas en reposo.
+
 ## 24/11/2026 · Scroll 2 · Flores y postales
 
 - **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.

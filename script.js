@@ -36,16 +36,16 @@ function wildflowers(count, seed, depth) {
     size: (.014 + random() ** 2 * .047) * depth,
     petals: 4 + Math.floor(random() * 6),
     color: backgroundColor,
-    startsOpen: (index + seed) % 5 === 0,
+    startsOpen: (index + seed) % 4 === 0,
   }));
 }
 
 const layers = [
-  { plants: wildflowers(56, 203, .91), alpha: .27, travel: 8 },
-  { plants: wildflowers(40, 425, 1), alpha: .43, travel: 20 },
+  { plants: wildflowers(72, 203, .91), alpha: .27, travel: 8 },
+  { plants: wildflowers(54, 425, 1), alpha: .43, travel: 20 },
   {
     plants: [
-      ...wildflowers(17, 562, .73),
+      ...wildflowers(26, 562, .73),
       { x: .41, height: .38, lean: -.055, size: .071, color: backgroundColor, petals: 8 },
       ...accents,
     ],

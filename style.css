@@ -88,23 +88,25 @@ button {
 }
 
 .jardin {
-  position: relative;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
   height: 69svh;
   background: white;
 }
 
 .cita-portada {
-  position: absolute;
-  top: clamp(10px, 2.7vw, 36px);
-  right: clamp(16px, 4.3vw, 72px);
-  margin: 0;
-  max-width: min(31ch, 72%);
-  padding: 4px 0 4px 8px;
-  background: white;
+  justify-self: end;
+  margin: clamp(10px, 1.8vw, 24px) clamp(16px, 4.3vw, 72px) 5px 16px;
+  max-width: min(42ch, 77%);
   color: #4f4d76;
-  font: 400 clamp(16px, 2.1vw, 22px)/1.15 "Instrument Serif", Georgia, serif;
+  font: 400 clamp(13px, 1.5vw, 16px)/1.2 "Instrument Serif", Georgia, serif;
   text-align: right;
-  pointer-events: none;
+}
+
+.jardin-escena {
+  position: relative;
+  min-height: 0;
+  overflow: hidden;
 }
 
 #flores {
