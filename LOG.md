@@ -126,6 +126,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Observación.** Aumentar la densidad fija llenaba demasiado el jardín en reposo. En la referencia, el volumen aparece cuando se abren las flores y empiezan a verse ramitas.
 - **Ajuste.** Recuperé las 153 flores oliva. Los capullos muestran un tallo más sencillo. Las ramas y las hojas crecen por etapas al abrirse los pétalos y retroceden al cerrarse.
 
+### Densidad en pantallas anchas
+
+- **Observación.** En una pantalla mucho más ancha que alta, las flores dejaban más espacio blanco que en la vista previa pequeña.
+- **Ajuste.** Añadí una capa de flores oliva cuya cantidad depende de la proporción del jardín. Se reparte por todo el ancho y conserva la aparición progresiva de ramitas y hojas. La composición anterior se mantiene como base en pantallas más estrechas.
+
 ## 24/11/2026 · Scroll 2 · Flores y postales
 
 - **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.
