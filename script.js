@@ -1,10 +1,3 @@
-const boton = document.querySelector('#boton');
-const texto = document.querySelector('#texto');
-
-boton.addEventListener('click', () => {
-  texto.hidden = !texto.hidden;
-});
-
 const garden = document.querySelector('.jardin');
 const canvas = document.querySelector('#flores');
 const scene = canvas.parentElement;
@@ -606,21 +599,6 @@ addEventListener('scroll', scheduleGarden, { passive: true });
 addEventListener('resize', scheduleGarden);
 reducedMotion.addEventListener('change', scheduleGarden);
 scheduleGarden();
-for (const postcardCanvas of document.querySelectorAll('[data-flor-postal]')) {
-  const flower = accents.find(plant => plant.name === postcardCanvas.dataset.florPostal);
-  const context = postcardCanvas.getContext('2d', { willReadFrequently: true });
-  if (!flower || !context) continue;
-
-  const { width, height } = postcardCanvas;
-  const plant = { ...flower, x: .48, height: .63, lean: flower.lean * .5, size: .21 };
-  const { x, y, radius } = bloomPosition(plant, width, height);
-  drawStem(context, plant, width, height, .8);
-  context.save();
-  context.translate(x, y);
-  drawBloom(context, plant, radius, .8, 1);
-  context.restore();
-  stipple(context, width, height);
-}
 
 for (const button of document.querySelectorAll('[data-postal-giro]')) {
   button.addEventListener('click', () => {
