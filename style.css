@@ -295,9 +295,9 @@ body {
 
 .historia-foto {
   background-color: #e1e5cd;
-  background-image: var(--imagen, none);
-  background-position: center;
-  background-size: cover;
+  display: block;
+  object-fit: cover;
+  object-position: var(--encuadre, center);
   transition: transform 220ms ease;
 }
 
