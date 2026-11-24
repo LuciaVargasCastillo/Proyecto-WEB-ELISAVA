@@ -161,6 +161,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Etiquetas de portada.** Cambié los textos de los dos botones a «Historias» y «Kleine-Levin».
 
+### Scroll de Historias
+
+- **Trabajo.** Enlacé el botón «Historias» a la composición de cuatro personas diseñada por la autora. Reproduje la posición y el tamaño relativo de las ocho fotos, los textos y el fondo oliva. Las imágenes se amplían ligeramente al pasar el cursor.
+- **Pendiente.** Incorporar las ocho fotos del diseño. Los espacios están preparados con el encuadre de referencia.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
