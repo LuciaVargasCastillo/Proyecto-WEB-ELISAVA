@@ -34,14 +34,16 @@ body {
 .portada-enlace {
   box-sizing: border-box;
   display: inline-flex;
+  min-width: 124px;
   min-height: 40px;
   align-items: center;
   justify-content: center;
   padding: 7px 16px;
   border: 1px solid #2448b6;
+  border-radius: 999px;
   color: #2448b6;
   font-family: "Instrument Serif", Georgia, serif;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1.2;
   text-decoration: none;
 }
