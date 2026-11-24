@@ -157,6 +157,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Decisión.** Retiré la cuadrícula de las cuatro postales superpuestas y el scroll final de agradecimiento. Cada flor de portada sigue llevando a su postal individual. «Historias» lleva al inicio de esas cuatro secciones.
 - **Ajuste.** Dejé la indicación de pulsar una flor en cursiva y retiré los círculos de color.
 
+- **Ajuste tipográfico.** Dejé la indicación subrayada a 12 px, en cursiva, y amplié la cita de portada a un tamaño adaptable de 16 a 22 px.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
