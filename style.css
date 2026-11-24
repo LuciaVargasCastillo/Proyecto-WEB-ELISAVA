@@ -96,16 +96,64 @@ button {
 .jardin {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  height: calc(var(--alto-marco) * .69);
+  height: calc(var(--alto-marco) * .63);
   background: white;
 }
 
+.jardin-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px 20px;
+  padding: 5px clamp(16px, 4.3vw, 72px);
+}
+
+.jardin-guia,
+.jardin-guia-enlaces {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2px;
+}
+
+.jardin-guia {
+  gap: 3px 8px;
+}
+
+.jardin-guia p,
 .cita-portada {
-  justify-self: end;
-  margin: clamp(10px, 1.8vw, 24px) clamp(16px, 4.3vw, 72px) 5px 16px;
-  max-width: min(42ch, 77%);
+  margin: 0;
   color: #000;
   font: 400 clamp(13px, 1.5vw, 16px)/1.2 "Instrument Serif", Georgia, serif;
+}
+
+.jardin-guia-enlaces a {
+  display: grid;
+  width: 26px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+}
+
+.jardin-guia-enlaces a::before {
+  width: 10px;
+  height: 10px;
+  border: 1px solid #24212b80;
+  border-radius: 50%;
+  background: var(--flor-color);
+  content: "";
+}
+
+.jardin-guia-enlaces a:hover,
+.jardin-guia-enlaces a:focus-visible {
+  outline: 1px solid #3d4128;
+  outline-offset: -2px;
+}
+
+.cita-portada {
+  max-width: 42ch;
+  margin-left: auto;
   text-align: right;
 }
 
