@@ -138,6 +138,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Criterio de revisión.** Cada postal debe verse como una pieza colocada sobre su flor y dejar visible parte de la corola. Los textos de las postales quedan por definir.
 - **Estado.** Primera composición implementada. Queda revisarla visualmente para completar la vuelta de este scroll.
 
+### Navegación y giro de las postales
+
+- **Trabajo.** Enlacé cada flor principal de la portada y del segundo scroll con su propia sección. Al hacer clic o tocar la postal, se voltea para mostrar el reverso. Un segundo clic vuelve a la cara de la foto.
+- **Estado.** Las cuatro secciones tienen espacios reservados para las fotos y dedicatorias de la autora.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
