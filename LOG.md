@@ -143,6 +143,10 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** Enlacé cada flor principal de la portada y del segundo scroll con su propia sección. Al hacer clic o tocar la postal, se voltea para mostrar el reverso. Un segundo clic vuelve a la cara de la foto.
 - **Estado.** Las cuatro secciones tienen espacios reservados para las fotos y dedicatorias de la autora.
 
+### Marco de pantalla
+
+- **Decisión.** Ajusté la presentación a un marco de escritorio de 1440 × 1024 px. El contenido se centra en pantallas grandes y se adapta a las pequeñas. La altura de referencia se aplica a las secciones visuales y el recorrido sigue siendo vertical.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
