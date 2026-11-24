@@ -54,7 +54,7 @@ Como una postal con una flor que reconoce una presencia silenciosa.
 ## Estado de la V1
 
 - **Portada.** Jardín interactivo en semitono sobre blanco, con fondo floral oliva, cuatro flores protagonistas, una cita y accesos a Historias y Kleine-Levin. Al pasar el cursor se abren flores cercanas y aparecen ramitas por etapas. Al pulsar una protagonista se abre su sección de postal.
-- **Kleine-Levin.** Scroll integrado bajo la portada, con una explicación breve basada en NIH y Cleveland Clinic y un borrador personal sobre la comunicación durante mis episodios y el agradecimiento mediante flores y postales. El prado que elegí se ve a través de una ventana en arco.
 - **Historias.** Ocho fotos de cuatro personas en la composición que diseñé, sobre blanco. Al pulsar una foto aparece en el reverso una frase entre comillas que marca el lugar de mi futuro texto.
+- **Kleine-Levin.** Scroll integrado después de Historias, con una explicación breve basada en NIH y Cleveland Clinic y un borrador personal sobre la comunicación durante mis episodios y el agradecimiento mediante flores y postales. El prado que elegí se ve a través de una ventana en arco.
 - **Cuatro postales.** Hay una sección por color, accesible desde la portada. El giro funciona y las cuatro avisan que su diseño está por determinar. Las fotos y dedicatorias de las postales quedan pendientes.
 - **Datos.** El jardín de esta versión explora la forma y la interacción. Todavía falta preparar recuentos y decidir qué variables se usarán para comparar antes, durante y después y cómo se traducirán en rasgos florales.

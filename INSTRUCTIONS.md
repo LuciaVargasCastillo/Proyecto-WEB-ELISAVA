@@ -20,7 +20,7 @@ LO SABRÉ PORQUE: podré señalar en una pequeña tabla qué dato controla cada 
 
 ## 24/11/2026 · V1 para la Entrega 2
 
-**Quiero.** Presentar en una misma web el jardín, el contexto de Kleine-Levin, las historias de cuatro personas y las cuatro postales en desarrollo.
+**Quiero.** Presentar en una misma web el jardín, las historias de cuatro personas, el contexto de Kleine-Levin y las cuatro postales en desarrollo.
 
 **Será bueno si**
 

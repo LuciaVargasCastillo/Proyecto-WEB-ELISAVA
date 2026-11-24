@@ -13,16 +13,7 @@ Cada ficha registra el propósito, el criterio, la prueba y la decisión del scr
 - **Probé y observé.** Las primeras flores se cerraban demasiado pronto. Después, una densidad fija de 257 flores oliva llenaba mucho la vista pequeña, mientras que la composición anterior aparecía demasiado rala en pantallas muy anchas.
 - **Decidí.** Mantener el semitono en oliva, cuatro protagonistas, una densidad que responde al ancho y ramitas que aparecen con la apertura. La guía va en cursiva y subrayada. Comprobé la secuencia y los enlaces en código.
 
-## 2. Kleine-Levin · Explicación y relato personal
-
-- **Quiero.** Contar qué es el síndrome y explicar por qué las flores y las postales son mi forma de agradecer el acompañamiento.
-- **Será bueno si.** La explicación se lee con claridad sobre beige y mi vivencia queda junto a la foto del prado, dentro de una composición en dos mitades.
-- **No sirve si.** La navegación interrumpe el recorrido o cuesta volver al jardín.
-- **Lo sabré porque.** Podré entrar desde el botón de portada y volver con el enlace de la propia sección.
-- **Probé y observé.** La primera prueba abría una página independiente y dificultaba el regreso desde la vista previa.
-- **Decidí.** Integrarlo debajo de la portada y abrir un hueco en arco que deja ver la foto original del prado. Comprobé los dos enlaces y la presencia de la foto en el repositorio. El texto personal sigue siendo un primer borrador.
-
-## 3. Historias · Ocho retratos
+## 2. Historias · Ocho retratos
 
 - **Quiero.** Mantener la composición que diseñé con dos imágenes de cada una de las cuatro personas y reservar un reverso para hablar de mi relación con ellas.
 - **Será bueno si.** Los encuadres se reconocen, los pies de foto caben junto a cada imagen y el giro es reversible.
@@ -30,6 +21,15 @@ Cada ficha registra el propósito, el criterio, la prueba y la decisión del scr
 - **Lo sabré porque.** Podré abrir y cerrar los ocho reversos y volver al jardín desde Historias.
 - **Probé y observé.** Ajusté la composición y los encuadres con las ocho fotos originales. El enlace de regreso quedaba demasiado cerca de la foto de Gonzalo.
 - **Decidí.** Usar fondo blanco, Instrument Serif, pies limitados al tamaño de cada imagen y una línea propia para volver al jardín. Verifiqué el giro en ambos sentidos. Los textos entre comillas quedan por escribir.
+
+## 3. Kleine-Levin · Explicación y relato personal
+
+- **Quiero.** Contar qué es el síndrome y explicar por qué las flores y las postales son mi forma de agradecer el acompañamiento.
+- **Será bueno si.** La explicación se lee con claridad sobre beige y mi vivencia queda junto a la foto del prado, dentro de una composición en dos mitades.
+- **No sirve si.** La navegación interrumpe el recorrido o cuesta volver al jardín.
+- **Lo sabré porque.** Podré entrar desde el botón de portada y volver con el enlace de la propia sección.
+- **Probé y observé.** La primera prueba abría una página independiente y dificultaba el regreso desde la vista previa.
+- **Decidí.** Integrarlo en la misma página, después de Historias y abrir un hueco en arco que deja ver la foto original del prado. Comprobé los dos enlaces y la presencia de la foto en el repositorio. El texto personal sigue siendo un primer borrador.
 
 ## 4. Postal rosa
 

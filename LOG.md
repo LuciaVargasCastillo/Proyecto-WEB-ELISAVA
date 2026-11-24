@@ -206,6 +206,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - Guardé la V1 con los tres documentos de trabajo al día y una ficha por cada uno de los siete scrolls que aparecen en el recorrido final.
 - La V1 incluye imágenes de Historias y giros funcionales. Los reversos de Historias mantienen frases provisionales entre comillas. Las postales indican que su diseño sigue en desarrollo.
 
+- **Orden final de la V1.** Moví Kleine-Levin justo después de Historias y antes de las cuatro postales. El botón de la portada y el enlace de regreso conservan sus destinos.
+
 ## Siguientes pasos
 
 - Escribir los textos personales de Historias y las dedicatorias.
