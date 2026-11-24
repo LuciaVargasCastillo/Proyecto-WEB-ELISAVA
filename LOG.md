@@ -64,6 +64,12 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Observación.** Las flores abiertas daban más vida a la portada, pero quedaban abiertas durante toda la interacción. La textura se veía borrosa en algunas zonas.
 - **Decisión.** Usar las flores abiertas solo como primera imagen. Con el primer movimiento del cursor, las iniciales se incorporan al mismo ciclo de apertura y cierre que las demás. El semitono conserva huecos entre los puntos claros y oscuros. Desactivé el suavizado del dibujo y usé una imagen de respaldo PNG.
 
+### Ritmo de apertura y acento azul
+
+- **Observación.** La apertura se percibía rápida y las flores azules se confundían entre sí.
+- **Trabajo.** Alargué la apertura escalonada de 0,64 a 1,35 segundos. Añadí más flores azules de fondo y una flor principal en azul intenso.
+- **Decisión.** Al salir del jardín, la composición recupera gradualmente las flores abiertas de portada. Las que se activan al recorrer el jardín conservan su pausa y su cierre lento.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.

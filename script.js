@@ -16,6 +16,7 @@ const accents = [
   { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
   { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
   { x: .84, height: .76, lean: -.105, size: .061, color: '#487a68', petals: 7 },
+  { x: .57, height: .79, lean: .027, size: .103, color: '#2448b6', petals: 7, startsOpen: true },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
 
@@ -41,9 +42,9 @@ function wildflowers(count, seed, depth) {
 }
 
 const layers = [
-  { plants: wildflowers(46, 203, .91), alpha: .27, travel: 8 },
-  { plants: wildflowers(31, 425, 1), alpha: .43, travel: 20 },
-  { plants: [...wildflowers(14, 562, .73), ...accents], alpha: .68, travel: 38 },
+  { plants: wildflowers(56, 203, .91), alpha: .27, travel: 8 },
+  { plants: wildflowers(40, 425, 1), alpha: .43, travel: 20 },
+  { plants: [...wildflowers(17, 562, .73), ...accents], alpha: .68, travel: 38 },
 ].map(layer => ({ ...layer, image: document.createElement('canvas') }));
 
 function drawStem(ctx, plant, width, height, opacity) {
@@ -229,6 +230,7 @@ const blooms = layers.flatMap(layer =>
   })));
 const changing = new Set();
 let coverActive = true;
+let restoreAt;
 let frame;
 let previousTime;
 let pointer;
@@ -336,6 +338,18 @@ function renderGarden(time) {
     ? 0
     : Math.max(0, Math.min(1, -garden.getBoundingClientRect().top / travel));
   const offsets = new Map(layers.map(layer => [layer, Math.round(progress * layer.travel)]));
+  if (restoreAt === 0) restoreAt = time + 1100;
+  if (restoreAt !== undefined && time >= restoreAt) {
+    coverActive = true;
+    restoreAt = undefined;
+    for (const bloom of blooms) {
+      if (bloom.plant.startsOpen) {
+        bloom.opening = bloom.openness < 1;
+        changing.add(bloom);
+      }
+    }
+  }
+
   const nearby = [];
   const hovered = findBloom(width, height, offsets, nearby);
   const next = hovered ?? (pointer ? active : undefined);
@@ -354,18 +368,19 @@ function renderGarden(time) {
   previousTime = time;
   for (const bloom of changing) {
     const before = bloom.openness;
+    const staysOpen = bloom === active || (coverActive && bloom.plant.startsOpen);
     if (reducedMotion.matches) {
-      bloom.openness = Number(bloom === active || nearby.includes(bloom));
+      bloom.openness = Number(staysOpen || nearby.includes(bloom));
       bloom.opening = false;
       bloom.holdUntil = 0;
       changing.delete(bloom);
     } else if (bloom.opening) {
-      bloom.openness = Math.min(1, bloom.openness + elapsed / 640);
+      bloom.openness = Math.min(1, bloom.openness + elapsed / 1350);
       if (bloom.openness === 1) {
         bloom.opening = false;
         bloom.holdUntil = Math.max(bloom.holdUntil, time + 320);
       }
-    } else if (bloom === active) {
+    } else if (staysOpen) {
       changing.delete(bloom);
     } else if (time < bloom.holdUntil) {
       continue;
@@ -394,7 +409,7 @@ function renderGarden(time) {
   }
 
   still.hidden = true;
-  if (changing.size || swaying) scheduleGarden();
+  if (changing.size || swaying || restoreAt !== undefined) scheduleGarden();
 }
 
 function scheduleGarden() {
@@ -402,6 +417,7 @@ function scheduleGarden() {
 }
 
 function locatePointer(event) {
+  restoreAt = undefined;
   if (coverActive) {
     coverActive = false;
     for (const bloom of blooms) {
@@ -413,6 +429,7 @@ function locatePointer(event) {
 }
 
 function clearPointer() {
+  if (!coverActive) restoreAt = 0;
   pointer = undefined;
   scheduleGarden();
 }
