@@ -16,10 +16,10 @@ const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const backgroundColor = '#929661';
 const accents = [
-  { name: 'rosa', x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
+  { name: 'rosa', x: .16, height: .75, lean: .12, size: .09, color: '#a44c79', petals: 5, startsOpen: true },
   { name: 'naranja', x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
   { name: 'verde', x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7, startsOpen: true },
-  { name: 'azul', x: .46, height: .85, lean: -.022, size: .096, color: '#8fb3e2', petals: 7, startsOpen: true },
+  { name: 'azul', x: .46, height: .81, lean: -.022, size: .096, color: '#8fb3e2', petals: 7, startsOpen: true },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
 
@@ -46,7 +46,20 @@ function wildflowers(count, seed, depth) {
 
 const layers = [
   { plants: wildflowers(72, 203, .91), alpha: .27, travel: 8 },
-  { plants: wildflowers(54, 425, 1), alpha: .43, travel: 20 },
+  {
+    plants: [
+      ...wildflowers(54, 425, 1),
+      ...wildflowers(14, 784, 1).map((plant, index) => ({
+        ...plant,
+        x: .015 + (index + .5) / 14 * .38,
+        height: .38 + plant.height * .55,
+        size: .028 + plant.size * .88,
+        startsOpen: index % 3 === 0,
+      })),
+    ],
+    alpha: .43,
+    travel: 20,
+  },
   { plants: [], alpha: .46, travel: 25 },
   {
     plants: [
