@@ -131,6 +131,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Observación.** En una pantalla mucho más ancha que alta, las flores dejaban más espacio blanco que en la vista previa pequeña.
 - **Ajuste.** Añadí una capa de flores oliva cuya cantidad depende de la proporción del jardín. Se reparte por todo el ancho y conserva la aparición progresiva de ramitas y hojas. La composición anterior se mantiene como base en pantallas más estrechas.
 
+### Composición y guía del jardín
+
+- **Observación.** El primer scroll dejaba demasiado aire arriba y las flores de color necesitaban una señal clara para indicar que se podían pulsar.
+- **Ajuste.** Compacté el jardín, hice más alta la flor rosa y añadí flores oliva más altas y frondosas a la izquierda. Añadí arriba la indicación «Pulsa una flor de color para ver su postal» y cuatro puntos de color que también enlazan con ellas.
+
 ## 24/11/2026 · Scroll 2 · Flores y postales
 
 - **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.
