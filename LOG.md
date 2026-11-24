@@ -179,6 +179,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** El botón «Kleine-Levin» abre una página independiente. A la izquierda, una explicación breve contrastada con NIH y Cleveland Clinic en un fondo beige con el nombre del síndrome en transparencia. A la derecha, una foto de jardín enmarcada en arco y el relato personal sobre las flores y las postales como agradecimiento.
 - **Decisión.** Redacté el texto personal a partir de la investigación documentada y usé una imagen de jardín generada para la composición.
 
+- **Revisión.** Integré Kleine-Levin como un scroll debajo de la portada, con navegación interna de ida y vuelta. Usé la foto del prado que entregó la autora para todo el fondo derecho. La ventana en arco deja ver el mismo fondo por el hueco.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
