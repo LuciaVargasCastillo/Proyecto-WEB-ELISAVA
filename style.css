@@ -23,11 +23,42 @@ body {
   line-height: 1.06;
 }
 
-.portada .guia-portada {
-  margin: 0;
-  color: #4f4d76;
-  font-size: 15px;
-  line-height: 1.4;
+.portada-navegacion {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  align-self: flex-end;
+  justify-content: flex-end;
+}
+
+.portada-enlace {
+  box-sizing: border-box;
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px;
+  border: 1px solid #2448b6;
+  color: #2448b6;
+  font-family: "Instrument Serif", Georgia, serif;
+  font-size: 17px;
+  line-height: 1.2;
+  text-decoration: none;
+}
+
+.portada-enlace--flores {
+  background-color: #2448b6;
+  color: white;
+}
+
+.portada-enlace:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.portada-enlace:focus-visible {
+  outline: 2px solid #2448b6;
+  outline-offset: 3px;
 }
 
 @media (max-width: 540px) {

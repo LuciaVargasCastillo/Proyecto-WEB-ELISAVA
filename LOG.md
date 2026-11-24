@@ -88,6 +88,10 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** Ajusté «Una Flor de Regalo» a 36 px y elegí Instrument Serif para acercar el contraste de los trazos a la captura.
 - **Decisión.** Coloqué «Clica en las flores de colores» junto al título para indicar cómo explorar el jardín. En pantallas estrechas, la guía se coloca debajo.
 
+### Navegación de la portada
+
+- **Decisión.** Sustituí la guía de texto por dos botones abajo a la derecha, junto al título. «Flores» usa el azul de la flor destacada y lleva al jardín. «Historias» lleva a la introducción del proyecto y conserva el fondo blanco con borde azul.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.

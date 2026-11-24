@@ -8,15 +8,18 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="jardin" aria-label="Jardín interactivo">
+  <section id="flores-jardin" class="jardin" aria-label="Jardín interactivo">
     <img id="jardin-estatico" src="jardin.png" alt="" width="1080" height="610">
     <canvas id="flores" aria-hidden="true"></canvas>
   </section>
   <header class="portada">
     <h1>Una Flor de Regalo</h1>
-    <p class="guia-portada">Clica en las flores de colores.</p>
+    <nav class="portada-navegacion" aria-label="Explorar el proyecto">
+      <a class="portada-enlace portada-enlace--flores" href="#flores-jardin">Flores</a>
+      <a class="portada-enlace" href="#historias">Historias</a>
+    </nav>
   </header>
-  <main class="proyecto">
+  <main id="historias" class="proyecto">
   <p>Agradecer a las cinco personas que más quiero su presencia en los momentos en los que paso un periodo de Kleine_Levine, momentos en los que ni yo misma puedo estar.</p>
 
   <button id="boton">Ver mi pregunta</button>
