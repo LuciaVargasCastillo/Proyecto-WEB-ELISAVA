@@ -53,6 +53,12 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Decisión.** Conservar el fondo blanco, el semitono, los pétalos irregulares, la apertura en grupo y el cierre lento. Esta prueba del jardín usa formas generadas por código. La traducción de datos de WhatsApp a flores queda pendiente.
 - **Verificación.** Las pruebas de código comprobaron la apertura en grupo, la pausa y el cierre, además del balanceo y la preferencia de movimiento reducido. Queda revisar en navegador el ritmo final, la densidad y la silueta del capullo. [Versión guardada de la web](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/6bd5af8f322841b7afd800412dd8ce4f4a889a39).
 
+### Ajuste de la portada
+
+- **Trabajo.** Aumenté la densidad de flores de fondo y usé tres tonos de azul. Dejé algunas flores abiertas desde el inicio, repartidas a distintas alturas y con un balanceo suave. El resto se abre al recorrer el jardín.
+- **Decisión.** Las flores que forman la composición inicial permanecen abiertas. Las que se abren con el cursor conservan la pausa y el cierre lento. El siguiente paso es trabajar el texto de portada.
+- **Verificación.** Comprobé en código los estados iniciales, la apertura en grupo y el regreso a la composición inicial.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.

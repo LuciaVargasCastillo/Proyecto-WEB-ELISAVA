@@ -10,11 +10,11 @@ const canvas = document.querySelector('#flores');
 const still = document.querySelector('#jardin-estatico');
 const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const lavender = '#7770af';
+const gardenBlues = ['#676eaa', '#7885ba', '#5c72ac'];
 const accents = [
   { x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5 },
-  { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8 },
-  { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6 },
+  { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
+  { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
   { x: .84, height: .76, lean: -.105, size: .061, color: '#487a68', petals: 7 },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
@@ -29,20 +29,21 @@ function randomField(seed) {
 
 function wildflowers(count, seed, depth) {
   const random = randomField(seed);
-  return Array.from({ length: count }, () => ({
+  return Array.from({ length: count }, (_, index) => ({
     x: random() * 1.35 - .17,
     height: (.09 + random() ** 1.25 * .77) * depth,
     lean: (random() - .5) * .34,
     size: (.014 + random() ** 2 * .047) * depth,
     petals: 4 + Math.floor(random() * 6),
-    color: lavender,
+    color: gardenBlues[(index + seed) % gardenBlues.length],
+    startsOpen: (index + seed) % 5 === 0,
   }));
 }
 
 const layers = [
-  { plants: wildflowers(33, 203, .91), alpha: .27, travel: 8 },
-  { plants: wildflowers(23, 425, 1), alpha: .43, travel: 20 },
-  { plants: [...wildflowers(11, 562, .73), ...accents], alpha: .68, travel: 38 },
+  { plants: wildflowers(46, 203, .91), alpha: .27, travel: 8 },
+  { plants: wildflowers(31, 425, 1), alpha: .43, travel: 20 },
+  { plants: [...wildflowers(14, 562, .73), ...accents], alpha: .68, travel: 38 },
 ].map(layer => ({ ...layer, image: document.createElement('canvas') }));
 
 function drawStem(ctx, plant, width, height, opacity) {
@@ -217,7 +218,15 @@ function makePrint(layer, width, height) {
 }
 
 const blooms = layers.flatMap(layer =>
-  layer.plants.map(plant => ({ plant, layer, openness: 0, opening: false, holdUntil: 0, image: document.createElement('canvas') })));
+  layer.plants.map(plant => ({
+    plant,
+    layer,
+    rest: Number(Boolean(plant.startsOpen)),
+    openness: Number(Boolean(plant.startsOpen)),
+    opening: false,
+    holdUntil: 0,
+    image: document.createElement('canvas'),
+  })));
 const changing = new Set();
 let frame;
 let previousTime;
@@ -344,7 +353,7 @@ function renderGarden(time) {
   for (const bloom of changing) {
     const before = bloom.openness;
     if (reducedMotion.matches) {
-      bloom.openness = Number(bloom === active || nearby.includes(bloom));
+      bloom.openness = Number(bloom === active || nearby.includes(bloom) || bloom.rest === 1);
       bloom.opening = false;
       bloom.holdUntil = 0;
       changing.delete(bloom);
@@ -359,8 +368,8 @@ function renderGarden(time) {
     } else if (time < bloom.holdUntil) {
       continue;
     } else {
-      bloom.openness = Math.max(0, bloom.openness - elapsed / 2600);
-      if (bloom.openness === 0) changing.delete(bloom);
+      bloom.openness = Math.max(bloom.rest, bloom.openness - elapsed / 2600);
+      if (bloom.openness === bloom.rest) changing.delete(bloom);
     }
 
     if (bloom.openness !== before) paintBloom(bloom, width, height);
