@@ -121,6 +121,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Ajuste visual.** Puse el texto del botón «Flores» en blanco y la cita de arriba en negro.
 
+### Ramas que aparecen con la apertura
+
+- **Observación.** Aumentar la densidad fija llenaba demasiado el jardín en reposo. En la referencia, el volumen aparece cuando se abren las flores y empiezan a verse ramitas.
+- **Ajuste.** Recuperé las 153 flores oliva. Los capullos muestran un tallo más sencillo. Las ramas y las hojas crecen por etapas al abrirse los pétalos y retroceden al cerrarse.
+
 ## 24/11/2026 · Scroll 2 · Flores y postales
 
 - **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.
