@@ -9,7 +9,18 @@
 </head>
 <body>
   <section id="flores-jardin" class="jardin" aria-label="Jardín interactivo">
-    <p class="cita-portada">«Hay flores que cuentan historias que las palabras no alcanzan a contar.»</p>
+    <div class="jardin-cabecera">
+      <div class="jardin-guia">
+        <p>Pulsa una flor de color para ver su postal.</p>
+        <nav class="jardin-guia-enlaces" aria-label="Accesos a las postales por color">
+          <a href="#postal-rosa" aria-label="Ver la postal de la flor rosa" style="--flor-color: #a44c79"></a>
+          <a href="#postal-naranja" aria-label="Ver la postal de la flor naranja" style="--flor-color: #a16339"></a>
+          <a href="#postal-verde" aria-label="Ver la postal de la flor verde" style="--flor-color: #487a68"></a>
+          <a href="#postal-azul" aria-label="Ver la postal de la flor azul" style="--flor-color: #8fb3e2"></a>
+        </nav>
+      </div>
+      <p class="cita-portada">«Hay flores que cuentan historias que las palabras no alcanzan a contar.»</p>
+    </div>
     <div class="jardin-escena">
       <img id="jardin-estatico" src="jardin.png" alt="" width="1080" height="610">
       <canvas id="flores" aria-hidden="true"></canvas>
