@@ -77,22 +77,6 @@ body {
 }
 
 
-p {
-  color: #035200;
-  font-size: 45px;
-
-}
-#texto {
-  color: #474242;
-  font-size: 15px;
-
-}
-
-button {
-  padding: 10px 16px;
-  cursor: pointer;
-}
-
 .jardin {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
@@ -110,45 +94,14 @@ button {
 }
 
 .jardin-guia,
-.jardin-guia-enlaces {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 2px;
-}
-
-.jardin-guia {
-  gap: 3px 8px;
-}
-
-.jardin-guia p,
 .cita-portada {
   margin: 0;
   color: #000;
   font: 400 clamp(13px, 1.5vw, 16px)/1.2 "Instrument Serif", Georgia, serif;
 }
 
-.jardin-guia-enlaces a {
-  display: grid;
-  width: 26px;
-  height: 28px;
-  place-items: center;
-  border-radius: 50%;
-}
-
-.jardin-guia-enlaces a::before {
-  width: 10px;
-  height: 10px;
-  border: 1px solid #24212b80;
-  border-radius: 50%;
-  background: var(--flor-color);
-  content: "";
-}
-
-.jardin-guia-enlaces a:hover,
-.jardin-guia-enlaces a:focus-visible {
-  outline: 1px solid #3d4128;
-  outline-offset: -2px;
+.jardin-guia {
+  font-style: italic;
 }
 
 .cita-portada {
@@ -169,10 +122,6 @@ button {
   height: 100%;
 }
 
-.proyecto {
-  padding: clamp(24px, 6vw, 80px);
-}
-
 #jardin-estatico {
   position: absolute;
   inset: 0 0 auto;
@@ -190,89 +139,14 @@ button {
   image-rendering: pixelated;
 }
 
-.postales {
-  display: grid;
-  align-items: center;
-  min-height: calc(var(--alto-marco) * .68);
-  padding: clamp(26px, 5vw, 76px) clamp(18px, 5vw, 76px);
-  background: #e1e5cd;
-}
-
-.postales-cuadricula {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: clamp(10px, 2.5vw, 38px);
-  width: 100%;
-  max-width: 1240px;
-  margin-inline: auto;
-}
-
-.flor-postal {
-  position: relative;
-  min-width: 0;
-  margin: 0;
-}
-
-.flor-postal canvas {
-  display: block;
-  width: 100%;
-  height: auto;
-  image-rendering: pixelated;
-}
-
-.postal {
-  position: absolute;
-  top: 13%;
-  right: 5%;
-  width: 56%;
-  aspect-ratio: 1.55;
-  box-sizing: border-box;
-  transform: rotate(9deg);
-  border: 1px solid #dad3bc;
-  background: #fffaf0;
-  box-shadow: 1px 4px 10px #3a402528;
-}
-
-.postal::before {
-  position: absolute;
-  top: 12%;
-  right: 9%;
-  width: 14%;
-  aspect-ratio: .8;
-  border: 1px dashed #b7ae98;
-  content: "";
-}
-
-.flor-postal:nth-child(even) .postal {
-  right: auto;
-  left: 5%;
-  top: 16%;
-  transform: rotate(-8deg);
-}
-
-@media (max-width: 720px) {
-  .postales-cuadricula {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
-.flor-enlace,
-.flor-postal-enlace {
+.flor-enlace {
   position: absolute;
   z-index: 2;
-}
-
-.flor-enlace {
   border-radius: 50%;
   transform: translate(-50%, -50%);
 }
 
-.flor-postal-enlace {
-  inset: 0;
-}
-
 .flor-enlace:focus-visible,
-.flor-postal-enlace:focus-visible,
 .postal-giro:focus-visible {
   outline: 2px solid #3d4128;
   outline-offset: 4px;
@@ -297,6 +171,7 @@ button {
 }
 
 .postal-giro {
+  cursor: pointer;
   width: min(100%, 460px);
   padding: 0;
   border: 0;
