@@ -43,6 +43,7 @@ function wildflowers(count, seed, depth) {
 const layers = [
   { plants: wildflowers(72, 203, .91), alpha: .27, travel: 8 },
   { plants: wildflowers(54, 425, 1), alpha: .43, travel: 20 },
+  { plants: [], alpha: .46, travel: 25 },
   {
     plants: [
       ...wildflowers(26, 562, .73),
@@ -53,6 +54,7 @@ const layers = [
     travel: 38,
   },
 ].map(layer => ({ ...layer, image: document.createElement('canvas') }));
+const wideLayer = layers[2];
 
 function drawStem(ctx, plant, width, height, opacity, sparse = false) {
   const { x, height: reach, lean, size, color, petals } = plant;
@@ -226,16 +228,20 @@ function makePrint(layer, width, height) {
   stipple(ctx, width, height);
 }
 
-const blooms = layers.flatMap(layer =>
-  layer.plants.map(plant => ({
+function createBloom(plant, layer, open = plant.startsOpen) {
+  return {
     plant,
     layer,
-    openness: Number(Boolean(plant.startsOpen)),
+    openness: Number(Boolean(open)),
     opening: false,
     holdUntil: 0,
     image: document.createElement('canvas'),
     branches: document.createElement('canvas'),
-  })));
+  };
+}
+
+let blooms = layers.flatMap(layer =>
+  layer.plants.map(plant => createBloom(plant, layer)));
 const changing = new Set();
 let coverActive = true;
 let restoreAt;
@@ -245,6 +251,29 @@ let pointer;
 let pointerMoved = false;
 let lastPointerMove;
 let active;
+
+function adjustWideLayer(width, height) {
+  const count = Math.min(94, Math.max(0, Math.round((width / height - 2.75) * 43)));
+  if (count === wideLayer.plants.length) return;
+
+  // Keep the existing garden and its animation state when the viewport changes.
+  blooms = blooms.filter(bloom => {
+    if (bloom.layer !== wideLayer) return true;
+    changing.delete(bloom);
+    if (active === bloom) active = undefined;
+    return false;
+  });
+
+  wideLayer.plants = wildflowers(count, 883, 1).map((plant, index) => ({
+    ...plant,
+    x: (index + .5) / count,
+    height: .12 + plant.height * .85,
+    lean: plant.lean * .65,
+    size: plant.size * 1.23,
+    startsOpen: index % 3 === 0,
+  }));
+  blooms.push(...wideLayer.plants.map(plant => createBloom(plant, wideLayer, coverActive && plant.startsOpen)));
+}
 
 function bloomPosition(plant, width, height) {
   const unit = Math.min(width, height * 1.7);
@@ -414,6 +443,7 @@ function renderGarden(time) {
     canvas.width = width;
     canvas.height = height;
     paint.imageSmoothingEnabled = false;
+    adjustWideLayer(width, height);
     layers.forEach(layer => makePrint(layer, width, height));
     blooms.forEach(bloom => paintBloom(bloom, width, height));
   }
