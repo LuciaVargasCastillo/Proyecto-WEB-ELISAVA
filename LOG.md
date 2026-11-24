@@ -187,6 +187,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Navegación.** Añadí «Volver al jardín» arriba de Historias, con el mismo estilo y destino que en Kleine-Levin.
 
+- **Ajuste de posición.** Subí «Volver al jardín» en Historias para separarlo de la foto de Gonzalo.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
