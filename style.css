@@ -250,6 +250,11 @@ body {
   aspect-ratio: 1526 / 1022;
 }
 
+.historias-volver {
+  top: clamp(10px, 2vw, 26px);
+  z-index: 3;
+}
+
 .historias-composicion h2 {
   position: absolute;
   top: 52.5%;
@@ -374,7 +379,7 @@ body {
   .historias-composicion {
     display: grid;
     gap: 26px;
-    padding: 26px 17px;
+    padding: 60px 17px 26px;
     aspect-ratio: auto;
   }
 
