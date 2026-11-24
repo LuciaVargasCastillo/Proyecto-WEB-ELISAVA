@@ -112,6 +112,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Observación.** La cita ocupaba demasiado espacio y su fondo tapaba parte de la flor verde. Además, había pocas flores oliva visibles en el jardín.
 - **Ajuste.** Reduje el tamaño de la cita y la coloqué en una franja propia encima del dibujo. Aumenté la cantidad de flores oliva en las tres capas y dejé una proporción mayor abiertas en reposo.
 
+### Relleno de los huecos del jardín
+
+- **Observación.** Todavía quedaban huecos blancos entre las flores de la portada.
+- **Ajuste.** Pasé de 153 a 257 flores oliva. Las repartí a intervalos por todo el ancho, con corolas de tamaños variados y más flores abiertas al cargar, incluidas las capas intermedia y delantera.
+
 ### Color de los textos de portada
 
 - **Ajuste visual.** Puse el texto del botón «Flores» en blanco y la cita de arriba en negro.
