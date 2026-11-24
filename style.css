@@ -251,7 +251,7 @@ body {
 }
 
 .historias-volver {
-  top: clamp(10px, 2vw, 26px);
+  top: 5px;
   z-index: 3;
 }
 
