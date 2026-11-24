@@ -60,3 +60,7 @@ button {
 #jardin-estatico[hidden] {
   display: none;
 }
+#flores,
+#jardin-estatico {
+  image-rendering: pixelated;
+}

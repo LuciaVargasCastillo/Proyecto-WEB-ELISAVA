@@ -199,7 +199,8 @@ function stipple(ctx, width, height, opacity = 207) {
     for (let x = 0; x < width; x++) {
       const alpha = (y * width + x) * 4 + 3;
       const threshold = (bayer[(y % 4) * 4 + x % 4] + .5) * 16;
-      pixels.data[alpha] = pixels.data[alpha] > threshold ? opacity : 0;
+      const dot = Math.min(pixels.data[alpha], 184) > threshold;
+      pixels.data[alpha] = dot ? opacity : 0;
     }
   }
   ctx.putImageData(pixels, 0, 0);
@@ -221,13 +222,13 @@ const blooms = layers.flatMap(layer =>
   layer.plants.map(plant => ({
     plant,
     layer,
-    rest: Number(Boolean(plant.startsOpen)),
     openness: Number(Boolean(plant.startsOpen)),
     opening: false,
     holdUntil: 0,
     image: document.createElement('canvas'),
   })));
 const changing = new Set();
+let coverActive = true;
 let frame;
 let previousTime;
 let pointer;
@@ -325,6 +326,7 @@ function renderGarden(time) {
       layers[0].image.width !== width || layers[0].image.height !== height) {
     canvas.width = width;
     canvas.height = height;
+    paint.imageSmoothingEnabled = false;
     layers.forEach(layer => makePrint(layer, width, height));
     blooms.forEach(bloom => paintBloom(bloom, width, height));
   }
@@ -353,7 +355,7 @@ function renderGarden(time) {
   for (const bloom of changing) {
     const before = bloom.openness;
     if (reducedMotion.matches) {
-      bloom.openness = Number(bloom === active || nearby.includes(bloom) || bloom.rest === 1);
+      bloom.openness = Number(bloom === active || nearby.includes(bloom));
       bloom.opening = false;
       bloom.holdUntil = 0;
       changing.delete(bloom);
@@ -368,8 +370,8 @@ function renderGarden(time) {
     } else if (time < bloom.holdUntil) {
       continue;
     } else {
-      bloom.openness = Math.max(bloom.rest, bloom.openness - elapsed / 2600);
-      if (bloom.openness === bloom.rest) changing.delete(bloom);
+      bloom.openness = Math.max(0, bloom.openness - elapsed / 2600);
+      if (bloom.openness === 0) changing.delete(bloom);
     }
 
     if (bloom.openness !== before) paintBloom(bloom, width, height);
@@ -400,6 +402,12 @@ function scheduleGarden() {
 }
 
 function locatePointer(event) {
+  if (coverActive) {
+    coverActive = false;
+    for (const bloom of blooms) {
+      if (bloom.plant.startsOpen) changing.add(bloom);
+    }
+  }
   pointer = { x: event.clientX, y: event.clientY };
   scheduleGarden();
 }

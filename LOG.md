@@ -59,6 +59,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Decisión.** Las flores que forman la composición inicial permanecen abiertas. Las que se abren con el cursor conservan la pausa y el cierre lento. El siguiente paso es trabajar el texto de portada.
 - **Verificación.** Comprobé en código los estados iniciales, la apertura en grupo y el regreso a la composición inicial.
 
+### Primera imagen y nitidez del semitono
+
+- **Observación.** Las flores abiertas daban más vida a la portada, pero quedaban abiertas durante toda la interacción. La textura se veía borrosa en algunas zonas.
+- **Decisión.** Usar las flores abiertas solo como primera imagen. Con el primer movimiento del cursor, las iniciales se incorporan al mismo ciclo de apertura y cierre que las demás. El semitono conserva huecos entre los puntos claros y oscuros. Desactivé el suavizado del dibujo y usé una imagen de respaldo PNG.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
