@@ -10,7 +10,9 @@ const canvas = document.querySelector('#flores');
 const still = document.querySelector('#jardin-estatico');
 const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
-const gardenBlues = ['#676eaa', '#7885ba', '#5c72ac'];
+const olivePalette = document.documentElement.dataset.paleta === 'oliva' ||
+  new URLSearchParams(location.search).get('paleta') === 'oliva';
+const backgroundColors = olivePalette ? ['#929661'] : ['#676eaa', '#7885ba', '#5c72ac'];
 const accents = [
   { x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
   { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
@@ -36,7 +38,7 @@ function wildflowers(count, seed, depth) {
     lean: (random() - .5) * .34,
     size: (.014 + random() ** 2 * .047) * depth,
     petals: 4 + Math.floor(random() * 6),
-    color: gardenBlues[(index + seed) % gardenBlues.length],
+    color: backgroundColors[(index + seed) % backgroundColors.length],
     startsOpen: (index + seed) % 5 === 0,
   }));
 }

@@ -94,6 +94,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Ajuste visual.** Alargué los dos botones, redondeé los extremos y ajusté el texto a 16 px.
 
+### Cita de portada y prueba de color
+
+- **Trabajo.** Coloqué «Hay flores que cuentan historias que las palabras no alcanzan a contar.» arriba a la derecha del jardín.
+- **Prueba.** Preparé una segunda paleta con las flores del fondo en verde oliva `#929661`. La portada principal conserva el fondo azul. Las flores destacadas mantienen sus colores en las dos versiones. La variante se abre con `?paleta=oliva`.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.

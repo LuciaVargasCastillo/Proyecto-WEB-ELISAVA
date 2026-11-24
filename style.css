@@ -93,6 +93,20 @@ button {
   background: white;
 }
 
+.cita-portada {
+  position: absolute;
+  top: clamp(10px, 2.7vw, 36px);
+  right: clamp(16px, 4.3vw, 72px);
+  margin: 0;
+  max-width: min(31ch, 72%);
+  padding: 4px 0 4px 8px;
+  background: white;
+  color: #4f4d76;
+  font: 400 clamp(16px, 2.1vw, 22px)/1.15 "Instrument Serif", Georgia, serif;
+  text-align: right;
+  pointer-events: none;
+}
+
 #flores {
   display: block;
   width: 100%;
