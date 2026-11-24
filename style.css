@@ -235,7 +235,7 @@ body {
 .historias {
   background: #929661;
   color: #352617;
-  font: 400 clamp(12px, 1.25vw, 18px)/1.2 system-ui, sans-serif;
+  font: 400 clamp(12px, 1.25vw, 18px)/1.2 "Instrument Serif", Georgia, serif;
 }
 
 .historias-composicion {
@@ -268,16 +268,28 @@ body {
   height: var(--h);
 }
 
+.historia-persona {
+  container-type: inline-size;
+}
+
 .historia-vinculo,
 .historia-nombre {
   font: inherit;
   white-space: nowrap;
 }
 
+.historia-nombre {
+  inline-size: var(--w);
+  font-size: min(3.4cqw, 18px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .historia-nombre--vertical {
   width: var(--w);
   height: var(--h);
   writing-mode: vertical-rl;
+  inline-size: var(--h);
   transform: rotate(180deg);
 }
 
