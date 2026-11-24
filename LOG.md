@@ -103,8 +103,15 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Decisión.** Elegí el verde oliva `#929661` para las flores del fondo y como color de los botones. «Flores» va relleno y «Historias» lleva el borde en oliva. Cambié la flor azul a `#8fb3e2`.
 
+## 24/11/2026 · Scroll 2 · Flores y postales
+
+- **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.
+- **Primera prueba.** Coloqué las flores rosa, naranja, verde y azul en una cuadrícula que pasa de cuatro columnas a dos en pantallas estrechas. Dibujé las flores con el mismo semitono del jardín y superpuse las postales en color crema.
+- **Criterio de revisión.** Cada postal debe verse como una pieza colocada sobre su flor y dejar visible parte de la corola. Los textos de las postales quedan por definir.
+- **Estado.** Primera composición implementada. Queda revisarla visualmente para completar la vuelta de este scroll.
+
 ## Siguientes pasos
 
-- Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
+- Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
 - Probar cómo dos variables ficticias se traducen en rasgos florales comparables antes, durante y después.
 - Actualizar `SOUL.md`, `CONTEXT.md` e `INSTRUCTIONS.md` al cerrar las decisiones de la V1.

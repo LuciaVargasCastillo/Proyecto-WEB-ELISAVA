@@ -133,3 +133,69 @@ button {
 #jardin-estatico {
   image-rendering: pixelated;
 }
+
+.postales {
+  display: grid;
+  align-items: center;
+  min-height: 68svh;
+  padding: clamp(26px, 5vw, 76px) clamp(18px, 5vw, 76px);
+  background: #e1e5cd;
+}
+
+.postales-cuadricula {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: clamp(10px, 2.5vw, 38px);
+  width: 100%;
+  max-width: 1240px;
+  margin-inline: auto;
+}
+
+.flor-postal {
+  position: relative;
+  min-width: 0;
+  margin: 0;
+}
+
+.flor-postal canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  image-rendering: pixelated;
+}
+
+.postal {
+  position: absolute;
+  top: 13%;
+  right: 5%;
+  width: 56%;
+  aspect-ratio: 1.55;
+  box-sizing: border-box;
+  transform: rotate(9deg);
+  border: 1px solid #dad3bc;
+  background: #fffaf0;
+  box-shadow: 1px 4px 10px #3a402528;
+}
+
+.postal::before {
+  position: absolute;
+  top: 12%;
+  right: 9%;
+  width: 14%;
+  aspect-ratio: .8;
+  border: 1px dashed #b7ae98;
+  content: "";
+}
+
+.flor-postal:nth-child(even) .postal {
+  right: auto;
+  left: 5%;
+  top: 16%;
+  transform: rotate(-8deg);
+}
+
+@media (max-width: 720px) {
+  .postales-cuadricula {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

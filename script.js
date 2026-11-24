@@ -12,11 +12,11 @@ const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const backgroundColor = '#929661';
 const accents = [
-  { x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
+  { name: 'rosa', x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
   { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
-  { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
-  { x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7, startsOpen: true },
-  { x: .46, height: .85, lean: -.022, size: .096, color: '#8fb3e2', petals: 7, startsOpen: true },
+  { name: 'naranja', x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
+  { name: 'verde', x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7, startsOpen: true },
+  { name: 'azul', x: .46, height: .85, lean: -.022, size: .096, color: '#8fb3e2', petals: 7, startsOpen: true },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];
 
@@ -458,3 +458,18 @@ addEventListener('scroll', scheduleGarden, { passive: true });
 addEventListener('resize', scheduleGarden);
 reducedMotion.addEventListener('change', scheduleGarden);
 scheduleGarden();
+for (const postcardCanvas of document.querySelectorAll('[data-flor-postal]')) {
+  const flower = accents.find(plant => plant.name === postcardCanvas.dataset.florPostal);
+  const context = postcardCanvas.getContext('2d', { willReadFrequently: true });
+  if (!flower || !context) continue;
+
+  const { width, height } = postcardCanvas;
+  const plant = { ...flower, x: .48, height: .63, lean: flower.lean * .5, size: .21 };
+  const { x, y, radius } = bloomPosition(plant, width, height);
+  drawStem(context, plant, width, height, .8);
+  context.save();
+  context.translate(x, y);
+  drawBloom(context, plant, radius, .8, 1);
+  context.restore();
+  stipple(context, width, height);
+}
