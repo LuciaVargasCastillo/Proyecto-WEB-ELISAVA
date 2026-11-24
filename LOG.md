@@ -185,6 +185,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Reverso de las fotos de Historias.** Cambié el fondo de la composición a blanco. Las ocho fotos se voltean al pulsarlas y muestran entre comillas un texto provisional sobre la relación de la autora con cada persona y el Kleine-Levin.
 
+- **Navegación.** Añadí «Volver al jardín» arriba de Historias, con el mismo estilo y destino que en Kleine-Levin.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
