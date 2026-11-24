@@ -152,6 +152,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Decisión.** Ajusté la presentación a un marco de escritorio de 1440 × 1024 px. El contenido se centra en pantallas grandes y se adapta a las pequeñas. La altura de referencia se aplica a las secciones visuales y el recorrido sigue siendo vertical.
 
+### Recorrido directo a las postales
+
+- **Decisión.** Retiré la cuadrícula de las cuatro postales superpuestas y el scroll final de agradecimiento. Cada flor de portada sigue llevando a su postal individual. «Historias» lleva al inicio de esas cuatro secciones.
+- **Ajuste.** Dejé la indicación de pulsar una flor en cursiva y retiré los círculos de color.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
