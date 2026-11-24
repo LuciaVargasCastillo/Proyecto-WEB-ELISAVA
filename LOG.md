@@ -189,6 +189,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Ajuste de posición.** Subí «Volver al jardín» en Historias para separarlo de la foto de Gonzalo.
 
+- **Separación y tamaño.** Puse el regreso de Historias en una línea propia encima de las fotos y dejé los enlaces «Volver al jardín» a 12 px, como la indicación de la portada.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
