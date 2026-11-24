@@ -231,3 +231,100 @@ body {
     transition: none;
   }
 }
+
+.historias {
+  background: #929661;
+  color: #352617;
+  font: 400 clamp(12px, 1.25vw, 18px)/1.2 system-ui, sans-serif;
+}
+
+.historias-composicion {
+  position: relative;
+  aspect-ratio: 1526 / 1022;
+}
+
+.historias-composicion h2 {
+  position: absolute;
+  top: 52.5%;
+  left: 57.4%;
+  z-index: 1;
+  margin: 0;
+  font: inherit;
+}
+
+.historia-persona,
+.historia-vinculo,
+.historia-nombre,
+.historia-foto {
+  position: absolute;
+  top: var(--y);
+  left: var(--x);
+  margin: 0;
+}
+
+.historia-persona,
+.historia-foto {
+  width: var(--w);
+  height: var(--h);
+}
+
+.historia-vinculo,
+.historia-nombre {
+  font: inherit;
+  white-space: nowrap;
+}
+
+.historia-nombre--vertical {
+  width: var(--w);
+  height: var(--h);
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
+
+.historia-foto {
+  background-color: #e1e5cd;
+  background-image: var(--imagen, none);
+  background-position: center;
+  background-size: cover;
+  transition: transform 220ms ease;
+}
+
+@media (hover: hover) {
+  .historia-foto:hover {
+    z-index: 2;
+    transform: scale(1.055);
+  }
+}
+
+@media (max-width: 660px) {
+  .historias {
+    font-size: clamp(11px, 3.25vw, 16px);
+  }
+
+  .historias-composicion {
+    display: grid;
+    gap: 26px;
+    padding: 26px 17px;
+    aspect-ratio: auto;
+  }
+
+  .historias-composicion h2 {
+    position: static;
+    justify-self: center;
+  }
+
+  .historia-persona {
+    position: relative;
+    inset: auto;
+    width: min(100%, 440px);
+    height: auto;
+    justify-self: center;
+    aspect-ratio: var(--proporcion);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .historia-foto {
+    transition: none;
+  }
+}
