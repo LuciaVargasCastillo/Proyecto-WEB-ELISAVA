@@ -1,35 +1,60 @@
 # LOG · Una flor de regalo
 
-## 17/11/2026 · Preparación de las instrucciones de trabajo con IA
-Criterio: adaptar las cuatro plantillas del profesor a la investigación, conservando el concepto y sin inventar resultados ni datos personales. 1 propuesta inicial. Estado: archivos de configuración creados y subidos a GitHub.
-Aprendido: separar lo que ya aparece en la investigación de las hipótesis y de las tareas que aún deben probarse.
+## 28/10/2026 · Primera versión de la web
 
-## 17/11/2026 · Experimento de visualización de flores
-Se pidió a ChatGPT que leyera CONTEXT.md, SOUL.md e INSTRUCTIONS.md y propusiera tres formas de representar mensajes de WhatsApp mediante flores: pétalos, crecimiento y presencia.
-Resultado: se compararon ventajas y limitaciones y se exploró una simulación con datos ficticios. Se decidió seguir explorando flores generadas por código con símbolos distintos para cada participante (puntos para mí y estrellas para mi pareja).
-Aprendido: es necesario definir la correspondencia entre datos y símbolos; los ejemplos ficticios no son resultados de los chats reales.
-Estado: exploración conceptual realizada; generación definitiva con datos reales pendiente.
+- **Trabajo.** Subí la plantilla de clase con `index.html`, `style.css`, `script.js` y `README.md`. La página tenía una introducción provisional y un botón para mostrar u ocultar la pregunta.
+- **Punto de partida.** La plantilla ya permitía probar una interacción sencilla. [Primera versión](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/f79cdc6ae9716a32c8893011d5f626606e3462b1).
 
-## 17/11/2026 · Experimento de estructura e interacción web
-Se exploraron posibles interacciones y maneras de organizar la experiencia.
-Decisión: diferenciar Historias (relato de los vínculos personales) y Regalos (postales y flores de datos). La interacción hover se dejó para más adelante.
-Estado: ideas y navegación planteadas; sin implementación nueva en el código.
+## 03/11/2026 · Dedicatoria y pregunta de investigación
 
-## 17/11/2026 · Revisión técnica del proyecto
-Se revisaron index.html, style.css y script.js. Se detectó que la pregunta estaba dentro de una etiqueta HTML incorrecta (`<y>`) y se propuso sustituirla por `<p>`, ajustando el selector CSS de `y` a `#texto`.
-Estado: corrección autorizada y aplicada en el repositorio. No se modifica script.js ni el resto del diseño.
-Verificación pendiente: abrir la página en un navegador y comprobar que «Ver mi pregunta» muestra y oculta el texto al hacer clic.
+- **Trabajo.** Incorporé la dedicatoria a las cinco personas cercanas y la pregunta sobre cómo hacer visible su acompañamiento cuando disminuye mi comunicación.
+- **Decisión.** Cambié la composición de la plantilla mediante tamaños de texto más grandes y una primera paleta de crema, rosa y verde. [Cambios en HTML y CSS](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/bdf621372c9790fdbc813594342d0b6e5c0acfc0).
 
-## Próxima prueba pendiente · Datos convertidos en flor
-Criterio: que dos variables ficticias se traduzcan en rasgos florales comparables en antes, durante y después. Estado: pendiente una implementación técnica definitiva.
-Aprendido: por completar después de realizar y revisar la prueba.
+## 04/11/2026 · Organización de las sesiones
+
+- **Trabajo.** Revisé la estructura del proyecto y abrí un registro para anotar lo hecho, las decisiones, los archivos modificados y los pasos pendientes.
+- **Decisión.** Usar documentos Markdown para recoger la forma de trabajar, el contexto y los criterios del proyecto. [Primer registro](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/527f2ae32f808a699a66d81e7cab6c1b58c21078).
+
+## 17–18/11/2026 · Preparación y primeras pruebas con IA
+
+Los archivos y cambios de este bloque están fechados en GitHub el martes 17. El miércoles 18 corresponde a la sesión indicada al reconstruir el registro. El historial disponible no permite fechar por separado qué parte se hizo ese día.
+
+### Documentos de trabajo
+
+- **Trabajo.** Adapté las cuatro plantillas del profesor a la investigación y subí `SOUL.md`, `CONTEXT.md`, `INSTRUCTIONS.md` y `LOG.md`.
+- **Aprendizaje.** Dejar claro qué venía de la investigación, qué era una hipótesis y qué quedaba por probar. [Registro de las pruebas con IA](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/d45b8adfc3ef0de25b81fc35a42681d0f627b663).
+
+### Conversaciones convertidas en flores
+
+- **Prueba.** Exploré tres formas de representar los mensajes de WhatsApp mediante flores: pétalos, crecimiento y presencia. Comparé las opciones con una simulación de datos ficticios.
+- **Decisión.** Seguir explorando flores generadas por código y distinguir a las dos personas de la conversación con símbolos. La propuesta fue usar puntos para mis mensajes y estrellas para los de mi pareja.
+- **Aprendizaje.** Cada símbolo y rasgo de la flor necesita una correspondencia clara con los datos. Quedó pendiente comparar antes, durante y después con dos variables ficticias y preparar la visualización con datos reales.
+
+### Estructura de la web y revisión técnica
+
+- **Decisión.** Planteé dos recorridos: **Historias** para contar los vínculos y **Regalos** para explorar las postales y flores de datos. La interacción con el cursor quedó como idea para una prueba posterior.
+- **Corrección.** Reemplacé la etiqueta `<y>` por `<p>` en la pregunta y ajusté el selector CSS a `#texto`. Se conservó el botón y quedó pendiente verificarlo en navegador. [Corrección en HTML](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/f4f615439af1098f4118d570ee085a194697b270) · [Corrección en CSS](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/0cdefbf3193e13de41a78a3eb2fa374519e6949e).
 
 ## 24/11/2026 · Scroll 1 · Jardín interactivo
 
-- Quiero: abrir la web con un jardín sobre blanco, siluetas en semitono y cuatro flores de color. Al recorrerlo con el cursor, quiero ver cómo los pétalos se despliegan y ganan puntos en secuencia.
-- Criterio: que la apertura se complete aunque el cursor avance, que queden varias flores abiertas a la vez y que el cierre sea lento. El capullo debe distinguirse de la flor abierta.
-- Pruebas: se pasó de cuatro corolas simples a un jardín en capas a partir de las capturas de referencia de Everbloom. Se probó primero una apertura en cuatro flores, después en todas, y luego una apertura escalonada de los pétalos con puntos. Se añadió una pausa antes del cierre de 2,6 segundos y una zona de activación que abre flores vecinas.
-- Observado: el primer dibujo gustó más que la versión de pétalos demasiado regulares. El cierre inmediato cortaba el recorrido al mover el cursor. Los primeros capullos eran demasiado redondos; la versión con muchas puntas recordó a un insecto. También se percibieron los tallos demasiado juntos y las flores abiertas demasiado quietas.
-- Decisión: conservar el semitono, la apertura simultánea en grupo y el cierre lento. Reducir las puntas del capullo y la densidad de tallos. Añadir un balanceo leve mientras la flor está abierta, con una fase distinta para cada flor.
-- Verificación: se comprobó en código la apertura en grupo y el cierre tras la pausa. Queda revisar en navegador la última forma del capullo, la densidad y el balanceo. El jardín de esta prueba no usa datos de WhatsApp.
-- Siguiente vuelta: revisar el jardín en navegador y preparar el segundo scroll. Actualizar SOUL.md, CONTEXT.md e INSTRUCTIONS.md al cerrar las decisiones de la V1.
+### Intención y criterio
+
+Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro flores de color. Al recorrerlo con el cursor, los pétalos debían desplegarse en secuencia y ganar puntos. La apertura debía completarse aunque el cursor siguiera avanzando, con varias flores abiertas a la vez y un cierre lento.
+
+### Secuencia de pruebas y observaciones
+
+1. **Primer dibujo.** Probé cuatro flores simples y pasé a una composición de jardín con capas, tallos inclinados y textura de puntos a partir de las capturas de Everbloom. La primera vista previa mostró el texto pero no dibujó el jardín. Añadí una imagen de respaldo y preparé una vista previa independiente.
+2. **Apertura de los pétalos.** Probé el efecto primero en las cuatro flores destacadas. Quise extenderlo a todo el jardín y recuperar el dibujo inicial porque los pétalos se veían demasiado uniformes. La prueba siguiente hizo variar la cantidad de puntos. Después combiné ese efecto con cambios de silueta y una apertura escalonada.
+3. **Recorrido del cursor.** Al mover el cursor rápido, las flores empezaban a cerrarse antes de completar la apertura. Ajusté la secuencia para que terminen de abrirse y, al pasar por otras, se cierren poco a poco. Amplié la zona que activa flores cercanas y fijé el cierre en 2,6 segundos para que queden varias abiertas a la vez.
+4. **Capullos y movimiento.** Probé capullos redondos, luego más afilados y con hojitas salientes. Observé que demasiadas puntas les daban aspecto de insecto. Reduje las puntas y la densidad de tallos. Añadí un balanceo leve y desfasado mientras las flores están abiertas, porque se veían demasiado quietas.
+
+### Decisión y verificación
+
+- **Decisión.** Conservar el fondo blanco, el semitono, los pétalos irregulares, la apertura en grupo y el cierre lento. Esta prueba del jardín usa formas generadas por código. La traducción de datos de WhatsApp a flores queda pendiente.
+- **Verificación.** Las pruebas de código comprobaron la apertura en grupo, la pausa y el cierre, además del balanceo y la preferencia de movimiento reducido. Queda revisar en navegador el ritmo final, la densidad y la silueta del capullo. [Versión guardada de la web](https://github.com/LuciaVargasCastillo/Proyecto-WEB-ELISAVA/commit/6bd5af8f322841b7afd800412dd8ce4f4a889a39).
+
+## Siguientes pasos
+
+- Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
+- Probar cómo dos variables ficticias se traducen en rasgos florales comparables antes, durante y después.
+- Actualizar `SOUL.md`, `CONTEXT.md` e `INSTRUCTIONS.md` al cerrar las decisiones de la V1.
