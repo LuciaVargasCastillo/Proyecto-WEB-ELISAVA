@@ -50,7 +50,7 @@ body {
 
 .portada-enlace--flores {
   background-color: #929661;
-  color: #24212b;
+  color: #fff;
 }
 
 .portada-enlace:hover {
@@ -98,7 +98,7 @@ button {
   justify-self: end;
   margin: clamp(10px, 1.8vw, 24px) clamp(16px, 4.3vw, 72px) 5px 16px;
   max-width: min(42ch, 77%);
-  color: #4f4d76;
+  color: #000;
   font: 400 clamp(13px, 1.5vw, 16px)/1.2 "Instrument Serif", Georgia, serif;
   text-align: right;
 }
