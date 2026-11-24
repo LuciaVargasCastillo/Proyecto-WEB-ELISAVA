@@ -103,6 +103,10 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Decisión.** Elegí el verde oliva `#929661` para las flores del fondo y como color de los botones. «Flores» va relleno y «Historias» lleva el borde en oliva. Cambié la flor azul a `#8fb3e2`.
 
+### Cuatro flores protagonistas
+
+- **Decisión.** La flor azul oscura pasó al conjunto verde oliva del fondo y queda cerrada en reposo. Las cuatro protagonistas de la portada y las postales son la rosa, la naranja, la verde y la azul clara.
+
 ## 24/11/2026 · Scroll 2 · Flores y postales
 
 - **Intención.** Presentar cuatro flores de la portada con una postal superpuesta a cada una, sobre un fondo verde oliva más claro.

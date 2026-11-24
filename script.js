@@ -13,7 +13,6 @@ const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const backgroundColor = '#929661';
 const accents = [
   { name: 'rosa', x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
-  { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
   { name: 'naranja', x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
   { name: 'verde', x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7, startsOpen: true },
   { name: 'azul', x: .46, height: .85, lean: -.022, size: .096, color: '#8fb3e2', petals: 7, startsOpen: true },
@@ -44,7 +43,15 @@ function wildflowers(count, seed, depth) {
 const layers = [
   { plants: wildflowers(56, 203, .91), alpha: .27, travel: 8 },
   { plants: wildflowers(40, 425, 1), alpha: .43, travel: 20 },
-  { plants: [...wildflowers(17, 562, .73), ...accents], alpha: .68, travel: 38 },
+  {
+    plants: [
+      ...wildflowers(17, 562, .73),
+      { x: .41, height: .38, lean: -.055, size: .071, color: backgroundColor, petals: 8 },
+      ...accents,
+    ],
+    alpha: .68,
+    travel: 38,
+  },
 ].map(layer => ({ ...layer, image: document.createElement('canvas') }));
 
 function drawStem(ctx, plant, width, height, opacity) {
