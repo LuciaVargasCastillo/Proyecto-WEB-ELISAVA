@@ -92,6 +92,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Decisión.** Sustituí la guía de texto por dos botones abajo a la derecha, junto al título. «Flores» usa el azul de la flor destacada y lleva al jardín. «Historias» lleva a la introducción del proyecto y conserva el fondo blanco con borde azul.
 
+- **Ajuste visual.** Alargué los dos botones, redondeé los extremos y ajusté el texto a 16 px.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
