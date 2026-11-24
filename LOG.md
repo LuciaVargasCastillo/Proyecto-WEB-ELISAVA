@@ -159,6 +159,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Ajuste tipográfico.** Dejé la indicación subrayada a 12 px, en cursiva, y amplié la cita de portada a un tamaño adaptable de 16 a 22 px.
 
+- **Etiquetas de portada.** Cambié los textos de los dos botones a «Historias» y «Kleine-Levin».
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
