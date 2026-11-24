@@ -101,10 +101,14 @@ body {
 }
 
 .jardin-guia {
+  font-size: 12px;
   font-style: italic;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 
 .cita-portada {
+  font-size: clamp(16px, 1.8vw, 22px);
   max-width: 42ch;
   margin-left: auto;
   text-align: right;
