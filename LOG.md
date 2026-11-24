@@ -191,8 +191,23 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Separación y tamaño.** Puse el regreso de Historias en una línea propia encima de las fotos y dejé los enlaces «Volver al jardín» a 12 px, como la indicación de la portada.
 
+## 24/11/2026 · Cierre de la V1 para la Entrega 2
+
+### Vuelta completa del loop · Apertura del jardín
+
+1. **Intención.** Quería que el jardín pareciera respirar al recorrerlo y que el cursor invitara a descubrir las historias.
+2. **Prueba.** Probé primero cuatro flores y después un fondo más denso, con apertura y cierre al pasar el cursor.
+3. **Observación.** Al avanzar rápido, la flor se cerraba antes de terminar su apertura. Una densidad fija alta también llenaba demasiado el jardín en reposo y se percibía distinta según el ancho de la pantalla.
+4. **Decisión.** Cada flor completa la apertura. Las cercanas pueden quedar abiertas juntas y se cierran despacio. Las ramas aparecen por etapas y la densidad responde a las proporciones de la pantalla.
+5. **Verificación.** Se comprobaron en código los estados cerrado, intermedio y abierto, la apertura en grupo y el regreso al reposo. Las capturas de la autora sirvieron para revisar la densidad, la composición y la legibilidad de las primeras versiones.
+
+### Entrega y revisión
+
+- Guardé la V1 con los tres documentos de trabajo al día y una ficha por cada uno de los siete scrolls que aparecen en el recorrido final.
+- La V1 incluye imágenes de Historias y giros funcionales. Los reversos de Historias mantienen frases provisionales entre comillas. Las postales indican que su diseño sigue en desarrollo.
+
 ## Siguientes pasos
 
-- Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
-- Probar cómo dos variables ficticias se traducen en rasgos florales comparables antes, durante y después.
-- Actualizar `SOUL.md`, `CONTEXT.md` e `INSTRUCTIONS.md` al cerrar las decisiones de la V1.
+- Escribir los textos personales de Historias y las dedicatorias.
+- Definir la composición y la foto de cada una de las cuatro postales.
+- Preparar y verificar la correspondencia de dos variables de ejemplo con rasgos florales en los tres momentos del relato.

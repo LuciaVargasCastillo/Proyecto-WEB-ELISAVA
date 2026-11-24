@@ -17,3 +17,22 @@ NO SIRVE SI:
 - El resultado interpreta una menor respuesta como menor afecto o convierte el relato en una competición entre personas.
 
 LO SABRÉ PORQUE: podré señalar en una pequeña tabla qué dato controla cada rasgo floral, verificar que el ejemplo está etiquetado como ficticio, distinguir los tres momentos y probar la visualización en pantalla estrecha y amplia.
+
+## 24/11/2026 · V1 para la Entrega 2
+
+**Quiero.** Presentar en una misma web el jardín, el contexto de Kleine-Levin, las historias de cuatro personas y las cuatro postales en desarrollo.
+
+**Será bueno si**
+
+- Las cuatro flores de color se reconocen como puntos de entrada y llevan a sus postales. En la portada se entiende la indicación para pulsarlas.
+- La apertura de flores y ramas conserva un ritmo progresivo. El jardín queda quieto cuando termina el movimiento y la densidad se ajusta al ancho.
+- «Historias» y «Kleine-Levin» abren sus scrolls de la misma página. En ambos hay un enlace de vuelta al jardín. En Historias las ocho fotos se voltean y sus pies se ajustan a cada encuadre.
+- Cada postal se voltea y muestra un aviso claro de trabajo en curso. La V1 deja localizados los textos y las imágenes definitivas que faltan.
+- La composición usa Instrument Serif, oliva, fondo blanco en Historias y un marco de referencia de escritorio de 1440 × 1024 px con adaptación a móvil.
+
+**No sirve si**
+
+- Hay enlaces sin destino, el texto tapa flores o retratos, o el reverso aparece sin una manera de volver a la foto.
+- Los textos provisionales se confunden con dedicatorias terminadas, o las formas del jardín se presentan como resultados del análisis de WhatsApp.
+
+**Lo sabré porque** podré seguir los enlaces de ida y vuelta, voltear fotos y postales, leer los avisos y localizar los textos pendientes. En la siguiente fase podré probar dos variables con datos ficticios y contrastar su traducción visual antes de trabajar con datos personales.
