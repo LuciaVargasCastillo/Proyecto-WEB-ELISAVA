@@ -12,10 +12,10 @@ const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const gardenBlues = ['#676eaa', '#7885ba', '#5c72ac'];
 const accents = [
-  { x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5 },
+  { x: .16, height: .66, lean: .12, size: .085, color: '#a44c79', petals: 5, startsOpen: true },
   { x: .41, height: .38, lean: -.055, size: .071, color: '#61539d', petals: 8, startsOpen: true },
   { x: .65, height: .54, lean: -.055, size: .103, color: '#a16339', petals: 6, startsOpen: true },
-  { x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7 },
+  { x: .87, height: .76, lean: -.072, size: .061, color: '#487a68', petals: 7, startsOpen: true },
   { x: .46, height: .85, lean: -.022, size: .096, color: '#2448b6', petals: 7, startsOpen: true },
 ];
 const bayer = [0, 8, 2, 10, 12, 4, 14, 6, 3, 11, 1, 9, 15, 7, 13, 5];

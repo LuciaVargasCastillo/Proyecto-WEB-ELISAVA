@@ -78,6 +78,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Revisión de composición.** La primera posición de la azul la acercaba demasiado a la verde. Moví la azul al centro-izquierda y la verde ligeramente a la derecha. Comprobé la distancia entre las corolas azul, naranja y verde en distintos tamaños de pantalla.
 
+### Espacio para el texto y flores abiertas en reposo
+
+- **Trabajo.** Reduje la altura del jardín del 76 % al 69 % de la altura visible para dejar más espacio debajo del primer scroll.
+- **Decisión.** La flor verde y la rosa se suman a las que están abiertas al cargar y a las que permanecen abiertas al volver al reposo tras retirar el cursor.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
