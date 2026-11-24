@@ -7,6 +7,10 @@ boton.addEventListener('click', () => {
 
 const garden = document.querySelector('.jardin');
 const canvas = document.querySelector('#flores');
+const scene = canvas.parentElement;
+const flowerLinks = new Map(
+  Array.from(scene.querySelectorAll('[data-flor-enlace]'), link => [link.dataset.florEnlace, link]),
+);
 const still = document.querySelector('#jardin-estatico');
 const paint = canvas.getContext('2d');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
@@ -535,6 +539,19 @@ function renderGarden(time) {
     paint.restore();
   }
 
+  for (const bloom of blooms) {
+    const link = flowerLinks.get(bloom.plant.name);
+    if (!link) continue;
+    const offset = offsets.get(bloom.layer);
+    const scaleX = (width + offset * 2) / width;
+    const scaleY = (height + offset) / height;
+    const radius = bloom.plant.size * Math.min(width, height * 1.7);
+    link.style.left = (bloom.x * scaleX - offset) + 'px';
+    link.style.top = (bloom.y * scaleY - offset) + 'px';
+    link.style.width = Math.max(44, radius * 1.85 * scaleX) + 'px';
+    link.style.height = Math.max(44, radius * 1.85 * scaleY) + 'px';
+    link.hidden = false;
+  }
   still.hidden = true;
   if (changing.size || swaying || restoreAt !== undefined) scheduleGarden();
 }
@@ -564,14 +581,14 @@ function clearPointer() {
   scheduleGarden();
 }
 
-canvas.addEventListener('pointermove', event => {
+scene.addEventListener('pointermove', event => {
   if (event.pointerType !== 'touch') locatePointer(event);
 });
-canvas.addEventListener('pointerdown', locatePointer);
-canvas.addEventListener('pointerleave', event => {
+scene.addEventListener('pointerdown', locatePointer);
+scene.addEventListener('pointerleave', event => {
   if (event.pointerType !== 'touch') clearPointer();
 });
-canvas.addEventListener('pointercancel', clearPointer);
+scene.addEventListener('pointercancel', clearPointer);
 addEventListener('scroll', scheduleGarden, { passive: true });
 addEventListener('resize', scheduleGarden);
 reducedMotion.addEventListener('change', scheduleGarden);
@@ -590,4 +607,17 @@ for (const postcardCanvas of document.querySelectorAll('[data-flor-postal]')) {
   drawBloom(context, plant, radius, .8, 1);
   context.restore();
   stipple(context, width, height);
+}
+
+for (const button of document.querySelectorAll('[data-postal-giro]')) {
+  button.addEventListener('click', () => {
+    const turned = button.getAttribute('aria-pressed') !== 'true';
+    const front = button.querySelector('.postal-anverso');
+    const back = button.querySelector('.postal-reverso');
+    button.setAttribute('aria-pressed', String(turned));
+    button.setAttribute('aria-label', turned ? 'Volver a ver la foto' : 'Voltear la postal');
+    button.setAttribute('aria-describedby', turned ? back.id : front.id);
+    front.setAttribute('aria-hidden', String(turned));
+    back.setAttribute('aria-hidden', String(!turned));
+  });
 }
