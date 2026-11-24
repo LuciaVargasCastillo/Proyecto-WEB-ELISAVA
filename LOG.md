@@ -76,6 +76,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Observación y ajuste.** La flor azul intensa se veía encima de la naranja. Moví la azul hacia la derecha y dejé espacio entre las dos corolas.
 - **Decisión.** La portada y la composición que reaparece al salir del jardín quedan quietas. Las flores que están abiertas solo se balancean mientras se recorre el jardín con el cursor.
 
+- **Revisión de composición.** La primera posición de la azul la acercaba demasiado a la verde. Moví la azul al centro-izquierda y la verde ligeramente a la derecha. Comprobé la distancia entre las corolas azul, naranja y verde en distintos tamaños de pantalla.
+
 ## Siguientes pasos
 
 - Revisar el primer scroll en navegador y preparar el segundo con su ficha del loop.
