@@ -183,6 +183,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Estado de las postales.** Añadí un aviso visible en las cuatro secciones para indicar que el diseño está por determinar y que las postales siguen en desarrollo.
 
+- **Reverso de las fotos de Historias.** Cambié el fondo de la composición a blanco. Las ocho fotos se voltean al pulsarlas y muestran entre comillas un texto provisional sobre la relación de la autora con cada persona y el Kleine-Levin.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.

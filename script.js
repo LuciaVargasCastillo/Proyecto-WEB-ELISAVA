@@ -601,12 +601,14 @@ reducedMotion.addEventListener('change', scheduleGarden);
 scheduleGarden();
 
 for (const button of document.querySelectorAll('[data-postal-giro]')) {
+  const front = button.querySelector('.postal-anverso, .historia-foto-anverso');
+  const back = button.querySelector('.postal-reverso, .historia-foto-reverso');
+  const label = button.getAttribute('aria-label');
+
   button.addEventListener('click', () => {
     const turned = button.getAttribute('aria-pressed') !== 'true';
-    const front = button.querySelector('.postal-anverso');
-    const back = button.querySelector('.postal-reverso');
     button.setAttribute('aria-pressed', String(turned));
-    button.setAttribute('aria-label', turned ? 'Volver a ver la foto' : 'Voltear la postal');
+    button.setAttribute('aria-label', turned ? 'Volver a ver la foto' : label);
     button.setAttribute('aria-describedby', turned ? back.id : front.id);
     front.setAttribute('aria-hidden', String(turned));
     back.setAttribute('aria-hidden', String(!turned));
