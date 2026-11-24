@@ -174,6 +174,11 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 
 - **Fotos incorporadas.** Subí ocho copias optimizadas al repositorio y las coloqué en la composición original. Ajusté el encuadre de cada foto dentro de su marco. Los nombres conservan la tipografía de portada y sus límites de alto o ancho.
 
+### Página sobre el síndrome de Kleine-Levin
+
+- **Trabajo.** El botón «Kleine-Levin» abre una página independiente. A la izquierda, una explicación breve contrastada con NIH y Cleveland Clinic en un fondo beige con el nombre del síndrome en transparencia. A la derecha, una foto de jardín enmarcada en arco y el relato personal sobre las flores y las postales como agradecimiento.
+- **Decisión.** Redacté el texto personal a partir de la investigación documentada y usé una imagen de jardín generada para la composición.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.

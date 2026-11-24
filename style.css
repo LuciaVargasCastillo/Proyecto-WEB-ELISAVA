@@ -340,3 +340,140 @@ body {
     transition: none;
   }
 }
+
+.klein-pagina {
+  background: #f1ecd9;
+  color: #303323;
+}
+
+.klein-pliego {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  min-height: min(100svh, 1024px);
+  font-family: "Instrument Serif", Georgia, serif;
+}
+
+.klein-explicacion,
+.klein-relato {
+  position: relative;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  isolation: isolate;
+  box-sizing: border-box;
+  padding: clamp(74px, 9vw, 140px) clamp(24px, 5vw, 80px);
+}
+
+.klein-explicacion {
+  overflow: hidden;
+}
+
+.klein-volver {
+  position: absolute;
+  top: 26px;
+  left: clamp(24px, 4vw, 54px);
+  color: inherit;
+  text-underline-offset: 4px;
+  font-size: 17px;
+}
+
+.klein-marca {
+  position: absolute;
+  z-index: -1;
+  inset: auto -3% 2% -1%;
+  color: #929661;
+  opacity: .16;
+  font-size: clamp(118px, 19vw, 285px);
+  font-style: italic;
+  line-height: .72;
+  pointer-events: none;
+}
+
+.klein-texto {
+  width: min(100%, 33ch);
+  margin-inline: auto;
+  font-size: clamp(18px, 1.6vw, 23px);
+  line-height: 1.35;
+  text-align: center;
+}
+
+.klein-texto h1,
+.klein-gracias h2 {
+  margin: 0 0 14px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.klein-texto h1 {
+  font-size: clamp(38px, 4.1vw, 63px);
+}
+
+.klein-texto p,
+.klein-gracias p {
+  margin: 0 0 .75em;
+}
+
+.klein-fuentes {
+  margin-top: 1.75em;
+  font-size: 15px;
+}
+
+.klein-fuentes a {
+  color: inherit;
+  text-underline-offset: 3px;
+}
+
+.klein-relato {
+  padding-block: clamp(30px, 5vw, 72px);
+  background: #555942;
+  background-image: linear-gradient(#1d261d55, #1d261d69), var(--klein-jardin);
+  background-position: center;
+  background-size: cover;
+}
+
+.klein-postal {
+  display: grid;
+  justify-items: center;
+  width: min(100%, 390px);
+  box-sizing: border-box;
+  padding: clamp(20px, 3.1vw, 40px);
+  background: #f6f1e2;
+  border: 1px solid #cec7ac;
+  box-shadow: 0 12px 35px #1d261d35;
+}
+
+.klein-ventana {
+  display: block;
+  width: min(100%, 216px);
+  height: auto;
+  aspect-ratio: 4 / 5;
+  border-radius: 50% 50% 0 0 / 38% 38% 0 0;
+  object-fit: cover;
+  object-position: center 42%;
+}
+
+.klein-gracias {
+  margin-top: 20px;
+  font-size: clamp(17px, 1.5vw, 20px);
+  line-height: 1.24;
+  text-align: center;
+}
+
+.klein-gracias h2 {
+  font-size: clamp(28px, 3vw, 37px);
+  font-style: italic;
+}
+
+.klein-gracias p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 750px) {
+  .klein-pliego {
+    grid-template-columns: 1fr;
+  }
+
+  .klein-explicacion {
+    padding-block: 85px 55px;
+  }
+}
