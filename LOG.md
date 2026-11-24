@@ -23,3 +23,13 @@ Verificación pendiente: abrir la página en un navegador y comprobar que «Ver 
 ## Próxima prueba pendiente · Datos convertidos en flor
 Criterio: que dos variables ficticias se traduzcan en rasgos florales comparables en antes, durante y después. Estado: pendiente una implementación técnica definitiva.
 Aprendido: por completar después de realizar y revisar la prueba.
+
+## 24/11/2026 · Scroll 1 · Jardín interactivo
+
+- Quiero: abrir la web con un jardín sobre blanco, siluetas en semitono y cuatro flores de color. Al recorrerlo con el cursor, quiero ver cómo los pétalos se despliegan y ganan puntos en secuencia.
+- Criterio: que la apertura se complete aunque el cursor avance, que queden varias flores abiertas a la vez y que el cierre sea lento. El capullo debe distinguirse de la flor abierta.
+- Pruebas: se pasó de cuatro corolas simples a un jardín en capas a partir de las capturas de referencia de Everbloom. Se probó primero una apertura en cuatro flores, después en todas, y luego una apertura escalonada de los pétalos con puntos. Se añadió una pausa antes del cierre de 2,6 segundos y una zona de activación que abre flores vecinas.
+- Observado: el primer dibujo gustó más que la versión de pétalos demasiado regulares. El cierre inmediato cortaba el recorrido al mover el cursor. Los primeros capullos eran demasiado redondos; la versión con muchas puntas recordó a un insecto. También se percibieron los tallos demasiado juntos y las flores abiertas demasiado quietas.
+- Decisión: conservar el semitono, la apertura simultánea en grupo y el cierre lento. Reducir las puntas del capullo y la densidad de tallos. Añadir un balanceo leve mientras la flor está abierta, con una fase distinta para cada flor.
+- Verificación: se comprobó en código la apertura en grupo y el cierre tras la pausa. Queda revisar en navegador la última forma del capullo, la densidad y el balanceo. El jardín de esta prueba no usa datos de WhatsApp.
+- Siguiente vuelta: revisar el jardín en navegador y preparar el segundo scroll. Actualizar SOUL.md, CONTEXT.md e INSTRUCTIONS.md al cerrar las decisiones de la V1.
