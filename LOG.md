@@ -166,6 +166,8 @@ Quería abrir la web con un jardín sobre blanco, textura de semitono y cuatro f
 - **Trabajo.** Enlacé el botón «Historias» a la composición de cuatro personas diseñada por la autora. Reproduje la posición y el tamaño relativo de las ocho fotos, los textos y el fondo oliva. Las imágenes se amplían ligeramente al pasar el cursor.
 - **Pendiente.** Incorporar las ocho fotos del diseño. Los espacios están preparados con el encuadre de referencia.
 
+- **Tipografía y encuadre.** Apliqué Instrument Serif a Historias, limité los nombres al alto o ancho de su retrato y preparé un punto de encuadre individual para cada foto. Las ocho fotos son visibles en el chat y su incorporación a la web queda pendiente de disponer de los archivos.
+
 ## Siguientes pasos
 
 - Revisar los dos scrolls en navegador, definir el contenido de las postales y completar la ficha del segundo scroll.
