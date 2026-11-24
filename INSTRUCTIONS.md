@@ -36,3 +36,22 @@ LO SABRÉ PORQUE: podré señalar en una pequeña tabla qué dato controla cada 
 - Los textos provisionales se confunden con dedicatorias terminadas, o las formas del jardín se presentan como resultados del análisis de WhatsApp.
 
 **Lo sabré porque** podré seguir los enlaces de ida y vuelta, voltear fotos y postales, leer los avisos y localizar los textos pendientes. En la siguiente fase podré probar dos variables con datos ficticios y contrastar su traducción visual antes de trabajar con datos personales.
+
+## Próxima prueba · Tres flores al girar cada postal
+
+**Quiero.** Que cada postal cuente un vínculo y agradezca a esa persona su compañía. Tras girarla, quiero mostrar tres flores en el orden antes, durante y después de un episodio de Kleine-Levin. Cada flor representará los mensajes intercambiados en ese periodo y tendrá su propia interacción.
+
+**Será bueno si**
+
+- Mis mensajes y los de la otra persona se distinguen con dos códigos visuales que se mantienen en las tres flores de la postal.
+- La cantidad de mensajes se traduce en una presencia visual que se puede comparar entre periodos.
+- La aparición sucesiva de las flores deja claro en qué momento estamos y permite descubrir la interacción de cada una.
+
+**No sirve si**
+
+- Los códigos cambian entre flores o la composición dificulta saber de quién son los mensajes.
+- La prueba presenta como confirmado un patrón que aún queda por comprobar o convierte la cantidad de mensajes en una medida del afecto.
+
+**Lo sabré porque** podré seguir las tres flores en orden, reconocer los dos códigos y comparar su presencia de un periodo a otro. Primero probaré el sistema con datos ficticios identificados como tales. Después comprobaré con los recuentos si el intercambio es más equilibrado antes, destaca el código de la otra persona durante y vuelve a parecerse al primero después.
+
+**Estado.** Propuesta pendiente de diseño e implementación. Falta decidir la composición, cómo aparece cada flor y qué interacción tendrá.

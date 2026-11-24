@@ -12,6 +12,20 @@
 - No tengo documentados aquí los archivos exportados, los recuentos exactos ni una estructura de datos lista para programar. La IA no debe inventarlos.
 - Privacidad: los chats contienen datos personales de terceros. No publicar nombres reales, números, contenidos íntimos o extractos sin autorización; trabajar preferentemente con datos agregados o anonimizados.
 
+## Objetivo de las postales y las flores de datos
+
+Quiero que cada postal cuente la historia de mi vínculo con una persona y le agradezca que esté a mi lado durante los episodios de Kleine-Levin. Al girarla, quiero que aparezcan tres flores de datos, una después de otra. Cada flor representa las conversaciones con esa misma persona en un momento distinto.
+
+| Flor | Conversaciones | Patrón que quiero comprobar |
+| --- | --- | --- |
+| Primera | Antes del episodio de Kleine-Levin | Mis aportaciones y las de la otra persona tienen una presencia parecida. |
+| Segunda | Durante el episodio | El código de la otra persona aparece mucho más que el mío, porque espero encontrar más mensajes suyos mientras yo escribo menos. |
+| Tercera | Después del episodio | La presencia de ambos códigos vuelve a parecerse a la de la primera flor. |
+
+Quiero asignar un código visual a mis mensajes y otro a los de la otra persona, y mantener ambos códigos en las tres flores para que se puedan comparar. El patrón de la tabla es una hipótesis que contrastaré con las conversaciones.
+
+La secuencia de flores y sus interacciones todavía están por diseñar e implementar. Quedan por decidir la composición del reverso, cómo se revela cada flor y qué podrá hacer la persona al interactuar con ella.
+
 ## El tono
 Íntimo, agradecido, poético y conciliador, sin reproches.
 Como una postal con una flor que reconoce una presencia silenciosa.
