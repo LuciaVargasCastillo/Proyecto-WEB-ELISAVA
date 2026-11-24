@@ -1,6 +1,12 @@
+html {
+  background: #f6f6f0;
+}
+
 body {
+  --alto-marco: min(100svh, 1024px);
+  max-width: 1440px;
+  margin: 0 auto;
   font-family: sans-serif;
-  margin: 0;
   background-color: rgb(255, 249, 221);
 }
 
@@ -90,7 +96,7 @@ button {
 .jardin {
   display: grid;
   grid-template-rows: auto minmax(0, 1fr);
-  height: 69svh;
+  height: calc(var(--alto-marco) * .69);
   background: white;
 }
 
@@ -139,7 +145,7 @@ button {
 .postales {
   display: grid;
   align-items: center;
-  min-height: 68svh;
+  min-height: calc(var(--alto-marco) * .68);
   padding: clamp(26px, 5vw, 76px) clamp(18px, 5vw, 76px);
   background: #e1e5cd;
 }
@@ -230,7 +236,7 @@ button {
   justify-items: center;
   gap: 20px;
   box-sizing: border-box;
-  min-height: 90svh;
+  min-height: calc(var(--alto-marco) * .90);
   padding: 40px 20px;
   background: #e1e5cd;
   border-top: 1px solid #d1d5b9;
